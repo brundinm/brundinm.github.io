@@ -87,13 +87,15 @@ Discendo Floremus [Through learning we flourish]
 
 <p class="container-white-rabbit">
     <img class="white-rabbit" src="https://raw.githubusercontent.com/brundinm/brundinm/refs/heads/main/img/john-tenniel-white-rabbit.svg#svgView(viewBox(0,0,789,1207))" alt="SVG vector image of John Tenniel&apos;s illustration of the White Rabbit looking at his pocket watch, in Lewis Carroll&apos;s Alice&apos;s Adventures in Wonderland (Macmillan; 1865)" width="240" height="367"> <canvas class="analog-clock" id="tempus" width="75" height="75" role="img" aria-label="Animated analog clock rendered as a PNG raster image and created using HTML5 Canvas and JavaScript">&nbsp;</canvas> &nbsp;
-	<script>
-        const canvas = document.getElementById("tempus");
-        const ctx = canvas.getContext("2d");
-        let radius = canvas.height / 2;
-        ctx.translate(radius, radius);
-        radius = radius * 0.90;
-        setInterval(analogClock, 1000);
+	<script type="module">
+	    document.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById("tempus");
+            const ctx = canvas.getContext("2d");
+            let radius = canvas.height / 2;
+            ctx.translate(radius, radius);
+            radius = radius * 0.90;
+            setInterval(analogClock, 1000);
+        });
     </script>
 </p>
 
