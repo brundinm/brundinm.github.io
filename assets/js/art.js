@@ -1,4 +1,4 @@
-/* JavaScript for analog clock and digital clock */
+/* JavaScript for Art page clocks */
 // Analog clock
 function drawFace(ctx, radius) {
     const grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
