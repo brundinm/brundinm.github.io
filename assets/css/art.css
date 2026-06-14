@@ -1,0 +1,216 @@
+<style>
+/* CSS for Art page theming */
+.dinkus1 {
+    display: table;
+    margin: auto;
+    margin-top: -0.25e;
+    margin-bottom: -0.5em;
+}
+.ascii-art1 {
+    display: none;
+}
+.ascii-art2 {
+    display: none;
+}
+.ascii-art3 {
+    display: none;
+}
+.ascii-art4 {
+    display: flex;
+	margin-inline: auto;
+    font-size: 75%;
+    line-height: 1;
+    padding: 10px;
+    border-radius: 25px;
+	width: fit-content;
+}
+.dinkus1:hover ~ .ascii-art4 {
+    display: flex;
+	margin-inline: auto;
+    font-size: 75%;
+    line-height: 1;
+    padding: 10px;
+    border-radius: 25px;
+    color: #33ff33;
+    background-color: #282828;
+	width: fit-content;
+}
+@media screen and (max-width: 480px) {
+    .ascii-art1 {
+        display: flex;
+		margin-inline: auto;
+        font-size: 75%;
+        line-height: 1;
+        padding: 10px;
+        border-radius: 25px;
+		width: fit-content;
+    }
+    .dinkus1:hover ~ .ascii-art1 {
+        display: flex;
+		margin-inline: auto;
+        font-size: 75%;
+        line-height: 1;
+        padding: 10px;
+        border-radius: 25px;
+        color: #33ff33;
+        background-color: #282828;
+		width: fit-content;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .ascii-art2 {
+        display: flex;
+		margin-inline: auto;
+        font-size: 75%;
+        line-height: 1;
+        padding: 10px;
+        border-radius: 25px;
+		width: fit-content;
+    }
+    .dinkus1:hover ~ .ascii-art2 {
+        display: flex;
+		margin-inline: auto;
+        font-size: 75%;
+        line-height: 1;
+        padding: 10px;
+        border-radius: 25px;
+        color: #33ff33;
+        background-color: #282828;
+		width: fit-content;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .ascii-art3 {
+        display: flex;
+        margin-inline: auto;
+		font-size: 75%;
+        line-height: 1;
+        padding: 10px;
+        border-radius: 25px;
+		width: fit-content;
+    }
+    .dinkus1:hover ~ .ascii-art3 {
+        display: flex;
+        margin-inline: auto;
+		font-size: 75%;
+        line-height: 1;
+        padding: 10px;
+        border-radius: 25px;
+        color: #33ff33;
+        background-color: #282828;
+		width: fit-content;
+    }
+}
+@media screen and (max-width: 1025px) {
+    .ascii-art4 {
+        display: none;
+    }
+   .dinkus1:hover ~ .ascii-art4 {
+        display: none;
+    }
+}
+.dinkus2 {
+    display: table;
+    margin: auto;
+    margin-top: -0.25em;
+    margin-bottom: -0.75em;
+}
+.container-white-rabbit {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.white-rabbit {
+    position: relative;
+    z-index: 1;
+}
+.analog-clock {
+    position: absolute;
+    bottom: 5px;
+    z-index: 2;
+    background-color: transparent;
+    opacity: 0.5;
+}
+.dinkus2:hover ~ .container-white-rabbit > .white-rabbit {
+    position: relative;
+    z-index: 1;
+    opacity: 0.5;
+}
+.dinkus2:hover ~ .container-white-rabbit > .analog-clock {
+    position: absolute;
+    bottom: 5px;
+    z-index: 2;
+    background-color: transparent;
+    opacity: 1;
+}
+.white-rabbit-caption {
+    text-align: center;
+    font-size: 45%;
+    line-height: 1;
+    position: relative;
+    top: -15px;
+	overflow: visible;
+    overflow-y: visible !important; 
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.digital-clock {
+    display: table;
+    margin: auto;
+    font-size: 75%;
+    line-height: 1;
+}
+.time-flies {
+    display: none;
+    overflow: visible;
+    overflow-y: visible !important;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.tempus-fugit {
+    display: flex;
+    justify-content: center;
+    font-size: 75%;
+    line-height: 1;
+	overflow: visible;
+    overflow-y: visible !important;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.container-rotated-asterism {
+    display: none;
+}
+.rotated-asterism:after {
+    display: inline-block;
+    content: '\a0 \2042';
+    transform: rotate(180deg);
+}
+.container-asterism {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: -1em;
+}
+.asterism:after {
+    display: inline-block;
+    content: '\2042 \a0';
+}
+.digital-clock:hover + .time-flies {
+    display: flex;
+    justify-content: center;
+    font-size: 75%;
+    line-height: 1;
+}
+.digital-clock:hover ~ .tempus-fugit {
+    display: none;
+}
+.digital-clock:hover ~ .container-rotated-asterism {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: -1em;
+}
+.digital-clock:hover ~ .container-asterism {
+    display: none;
+}
+</style>
