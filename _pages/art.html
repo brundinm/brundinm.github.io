@@ -314,9 +314,7 @@ fruit flies like a banana
 </p>
 
 <script>
-/* Self-Defending, Immediately Invoked Clock Script */
 (function() {
-    // Analog clock drawing methods
     function drawFace(ctx, radius) {
         const grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
         grad.addColorStop(0, '#333');
@@ -394,7 +392,6 @@ fruit flies like a banana
     }
 
     function initClocks() {
-        // Initialize Canvas Analog Clock
         const canvas = document.getElementById("tempus");
         if (canvas) {
             const ctx = canvas.getContext("2d");
@@ -407,12 +404,9 @@ fruit flies like a banana
                 tickAnalog(ctx, radius);
             }, 1000);
         }
-        // Initialize Digital Clock
         digitalClock();
     }
 
-    // Fire immediately if DOM elements are already available inline, 
-    // fallback to event loop if not ready to completely isolate from global crashes
     if (document.getElementById("tempus") || document.getElementById("time")) {
         initClocks();
     } else {
