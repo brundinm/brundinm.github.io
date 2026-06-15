@@ -244,7 +244,7 @@ ul li {
 </p>
 
 <pre class="ascii-art1" role="img" aria-label="ASCII art of books created using preformatted text">      _ _
- .-._| | |
+ ._._| | |
  | |~| |=|
  |%| |.| |&lt;\
  |%| |.| | \\
@@ -256,35 +256,35 @@ Discendo Floremus
   we flourish]
 </pre>
 
-<pre class="ascii-art2" role="img" aria-label="ASCII art of a book created using preformatted text">     ______ ______
-   _/      |      \_
-  // ~~ ~~ | ~~ ~  \\
- // ~ ~ ~~ | ~~~ ~~ \\
+<pre class="ascii-art2" role="img" aria-label="ASCII art of a book created using preformatted text">      ______ ______
+    _/      |      \_
+   // ~~ ~~ | ~~ ~  \\
+  // ~ ~ ~~ | ~~~ ~~ \\
 //________.|.________\\
    Discendo Floremus
    [Through learning
      we flourish]
 </pre>
 
-<pre class="ascii-art3" role="img" aria-label="ASCII art of a book created using preformatted text">       __...--~~~~~-._   _.-~~~~~--...__
-     //                |                \\ 
-    //                 |                 \\ 
-   //__...--~~~~~~-._  |  _.-~~~~~~--...__\\ 
-  //__.....----~~~~._\ | /_.~~~~----.....__\\
- ====================\\|//====================
+<pre class="ascii-art3" role="img" aria-label="ASCII art of a book created using preformatted text">        __...--~~~~~-._   _.-~~~~~--...__
+      //                 |                 \\ 
+     //                  |                  \\ 
+    //__...--~~~~~~-._  |  _.-~~~~~~--...__\\ 
+   //__.....----~~~~._\ | /_.~~~~----.....__\\
+  ====================\\|//====================
 Discendo Floremus [Through learning we flourish]
 </pre>
 
-<pre class="ascii-art4" role="img" aria-label="ASCII art of books and a computer created using preformatted text">       .--.                   .---.                      .----.
-   .---|__|           .-.     |~~~|          .---------. | == |
-.--|===|--|_          |_|     |~~~|--.       |.-"""""-.| |----|
-|  |===|  |'\     .---!~|  .--|   |--|       ||       || | == |
-|%%|   |  |.'\    |===| |--|%%|   |  |  ==&gt;  ||       || |----|
-|%%|   |  |\.'\   |   | |__|  |   |  |  &lt;==  |'-.....-'| |::::|
-|  |   |  | \  \  |===| |==|  |   |  |       `"")---(""` |___.|
-|  |   |__|  \.'\ |   |_|__|  |~~~|__|      /:::::::::::\" _  "
-|  |===|--|   \.'\|===|~|--|%%|~~~|--|     /:::=======:::\`\`\ 
-^--^---'--^    `-'`---^-^--^--^---'--'     `"""""""""""""`  '-'
+<pre class="ascii-art4" role="img" aria-label="ASCII art of books and a computer created using preformatted text">        .--.                    .---.                       .----.
+    .---|__|           .-.      |~~~|           .---------. | == |
+.--|===|--|_          |_|      |~~~|--.        |.-"""""-.| |----|
+|  |===|  |'\     .---!~|  .--|   |--|        ||       || | == |
+|%%|   |  |.'\    |===| |--|%%|   |  |  ==&gt;   ||       || |----|
+|%%|   |  |\.'\   |   | |__|  |   |  |  &lt;==   |'-.....-'| |::::|
+|  |   |  | \  \  |===| |==|  |   |  |        `"")---(""` |___.|
+|  |   |__|  \.'\ |   |_|__|  |~~~|__|       /:::::::::::\" _  "
+|  |===|--|   \.'\|===|~|--|%%|~~~|--|      /:::=======:::\`\`\ 
+^--^---'--^    `-'`---^-^--^--^---'--'      `"""""""""""""`  '-'
     Discendo Floremus [Latin: Through learning we flourish]    
 </pre>
 
@@ -378,7 +378,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Scoped execution to prevent variable drops in layout templates
     function tickAnalog(ctx, radius) {
-        // Clear rect handles redraw spacing glitches common in theme updates
         ctx.clearRect(-radius, -radius, radius * 2, radius * 2);
         drawFace(ctx, radius);
         drawNumbers(ctx, radius);
@@ -404,7 +403,6 @@ document.addEventListener("DOMContentLoaded", function() {
         ctx.translate(radius, radius);
         radius = radius * 0.90;
         
-        // Run immediately, then interval
         tickAnalog(ctx, radius);
         setInterval(function() {
             tickAnalog(ctx, radius);
