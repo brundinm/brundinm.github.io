@@ -66,7 +66,7 @@ Canada T5J 4S2
     <strong>About</strong>
 </p>
 <p>
-    I am the Digital Services and Systems Librarian at MacEwan University Library at MacEwan University, which is <a href="https://www.openstreetmap.org/?mlat=53.547266&amp;mlon=-113.505016#map=15/53.547266/-113.505016" target="_blank" rel="nofollow noreferrer">located</a> in Edmonton, Alberta, Canada. Some of my responsibilities include overseeing various digital services and information systems, as well as investigating and implementing new digital technologies that support teaching, learning, and research at MacEwan University. I am also the subject liaison librarian for the Department of Computer Science, and the Library liaison to Access and Disability Resources (ADR) and to the University's Information Technology Services unit.
+    I am the Digital Services and Systems Librarian at <a href="https://library.macewan.ca/" target="_blank">MacEwan University Library</a> at MacEwan University, which is <a href="https://www.openstreetmap.org/?mlat=53.547266&amp;mlon=-113.505016#map=15/53.547266/-113.505016" target="_blank" rel="nofollow noreferrer">located</a> in Edmonton, Alberta, Canada. Some of my responsibilities include overseeing various digital services and information systems, as well as investigating and implementing new digital technologies that support teaching, learning, and research at MacEwan University. I am also the subject liaison librarian for the Department of Computer Science, and the Library liaison to Access and Disability Resources (ADR) and to the University's Information Technology Services unit.
 </p>
 
 <p>
