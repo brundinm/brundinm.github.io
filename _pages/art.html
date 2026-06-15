@@ -5,7 +5,7 @@ permalink: /art/
 author_profile: true
 ---
 
-<script>
+<script type="module">
 /* Internal JavaScript */
 // Analog clock
 function drawFace(ctx, radius) {
@@ -79,7 +79,9 @@ function digitalClock() {
         digitalClock();
     }, 1000)
 }
-digitalClock();
+document.addEventListener('DOMContentLoaded', () => {
+    digitalClock();
+});
 </script>
 		
 <style>
