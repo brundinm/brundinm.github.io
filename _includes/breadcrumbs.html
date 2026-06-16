@@ -21,30 +21,28 @@
     {% for crumb in crumbs offset: 1 %}
       
       {% if forloop.first %}
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a href="{{ base_path }}/">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" style="display: inline-block;">
+          <a href="{{ base_path }}/" style="display: inline-block; position: relative; z-index: 10; pointer-events: auto !important;">
             <span itemprop="name">{{ site.data.ui-text[site.locale].breadcrumb_home_label | default: "Home" }}</span>
           </a>
           <link itemprop="item" href="{{ base_path }}/" />
           <meta itemprop="position" content="{{ i }}" />
-          
           <span class="sep">{{ site.data.ui-text[site.locale].breadcrumb_separator | default: "/" }}</span>
         </li>
       {% endif %}
 
       {% if forloop.last %}
-        <li class="current">{{ page.title }}</li>
+        <li class="current" style="display: inline-block;">{{ page.title }}</li>
       {% else %}
         {% assign i = i | plus: 1 %}
         {% assign inner_url = crumb | downcase | replace: '%20', '-' | prepend: path_type | prepend: crumb_path | prepend: base_path %}
         
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a href="{{ inner_url }}">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" style="display: inline-block;">
+          <a href="{{ inner_url }}" style="display: inline-block; position: relative; z-index: 10; pointer-events: auto !important;">
             <span itemprop="name">{{ crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}</span>
           </a>
           <link itemprop="item" href="{{ inner_url }}" />
           <meta itemprop="position" content="{{ i }}" />
-          
           <span class="sep">{{ site.data.ui-text[site.locale].breadcrumb_separator | default: "/" }}</span>
         </li>
       {% endif %}
