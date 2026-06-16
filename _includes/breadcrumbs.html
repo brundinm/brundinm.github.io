@@ -14,22 +14,20 @@
   {% assign crumb_path = site.categories.path %}
 {% endif %}
 
-<nav class="breadcrumbs">
-  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+<nav class="breadcrumbs" style="position: relative; z-index: 9999 !important; display: block; clear: both; pointer-events: auto !important;">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList" style="margin: 0; padding: 0; list-style: none;">
     {% assign crumbs = page.url | split: '/' %}
     {% assign i = 1 %}
     {% for crumb in crumbs offset: 1 %}
       
       {% if forloop.first %}
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" style="display: inline-block; vertical-align: middle;">
-          <a href="{{ base_path }}/" style="display: inline-block; vertical-align: middle; cursor: pointer !important; -webkit-appearance: none;">
-            <div style="display: inline-block; pointer-events: auto !important; cursor: pointer !important;">
-              <span itemprop="name">{{ site.data.ui-text[site.locale].breadcrumb_home_label | default: "Home" }}</span>
-            </div>
+          <a href="{{ base_path }}/" style="display: inline-block; vertical-align: middle; cursor: pointer !important; position: relative; z-index: 10000 !important; pointer-events: auto !important;">
+            <span itemprop="name">{{ site.data.ui-text[site.locale].breadcrumb_home_label | default: "Home" }}</span>
           </a>
           <link itemprop="item" href="{{ base_path }}/" />
           <meta itemprop="position" content="{{ i }}" />
-          <span class="sep" style="vertical-align: middle;">{{ site.data.ui-text[site.locale].breadcrumb_separator | default: "/" }}</span>
+          <span class="sep" style="vertical-align: middle; padding: 0 4px;">{{ site.data.ui-text[site.locale].breadcrumb_separator | default: "/" }}</span>
         </li>
       {% endif %}
 
@@ -40,14 +38,12 @@
         {% assign inner_url = crumb | downcase | replace: '%20', '-' | prepend: path_type | prepend: crumb_path | prepend: base_path %}
         
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" style="display: inline-block; vertical-align: middle;">
-          <a href="{{ inner_url }}" style="display: inline-block; vertical-align: middle; cursor: pointer !important; -webkit-appearance: none;">
-            <div style="display: inline-block; pointer-events: auto !important; cursor: pointer !important;">
-              <span itemprop="name">{{ crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}</span>
-            </div>
+          <a href="{{ inner_url }}" style="display: inline-block; vertical-align: middle; cursor: pointer !important; position: relative; z-index: 10000 !important; pointer-events: auto !important;">
+            <span itemprop="name">{{ crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}</span>
           </a>
           <link itemprop="item" href="{{ inner_url }}" />
           <meta itemprop="position" content="{{ i }}" />
-          <span class="sep" style="vertical-align: middle;">{{ site.data.ui-text[site.locale].breadcrumb_separator | default: "/" }}</span>
+          <span class="sep" style="vertical-align: middle; padding: 0 4px;">{{ site.data.ui-text[site.locale].breadcrumb_separator | default: "/" }}</span>
         </li>
       {% endif %}
 
