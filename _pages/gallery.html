@@ -72,6 +72,14 @@ img {
     transform: scale(1.5);
     transition: opacity 0.1s ease, transform 0.3s ease-out;
 }
+dialog {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	width: 100%;
+    max-width: 500px;
+}
 </style>
 
 <p>
@@ -90,8 +98,11 @@ img {
     ---
 </p>
 <p>
-    Canada's Libraries and Archives: RSC Expert Panel on The Status and Future of Canada's Libraries and Archives. Developed the CWRC-hosted Royal Society of Canada (RSC) Expert Panel on The Status and Future of Canada's Libraries and Archives mapping and timeline application, which used the SIMILE Exhibit data publishing framework to display the location of, and the year of establishment for, many of the libraries and archives of Canada; the visualization application was included as part of the RSC Expert Panel's report <em>The Future Now: Canada's Libraries, Archives, and Public Memory</em> (Royal Society of Canada; 2014). CWRC (the Collaboratory for Writing and Research on Culture, formerly the Canadian Writing Research Collaboratory) is a national digital content platform with allied research tools to support the study and preservation of Canadian literary and cultural history. (2014).<br />
+    Canada's Libraries and Archives: RSC Expert Panel on The Status and Future of Canada's Libraries and Archives. Developed the CWRC-hosted Royal Society of Canada (RSC) Expert Panel on The Status and Future of Canada's Libraries and Archives mapping and timeline application, which used the SIMILE Exhibit data publishing framework to display the location of, and the year of establishment for, many of the libraries and archives of Canada; the visualization application was included as part of the RSC Expert Panel's report <em>The Future Now: Canada's Libraries, Archives, and Public Memory</em> (Royal Society of Canada; 2014). CWRC (the Collaboratory for Writing and Research on Culture, formerly the Canadian Writing Research Collaboratory) is a national digital content platform with allied research tools to support the study and preservation of Canadian literary and cultural history. (A short video about the project can be accessed <a href="#" onclick="document.getElementById('myDialog').showModal(); return false;">here</a>.) (2014).<br />
     <img class="screenshot" src="/images/rsc-libraries-archives.png" alt="Screenshot image of the libraries and archives mapping and timeline application" width="500" height="300">
+	<dialog id="myDialog">
+    A short video providing an overview of the RSC-SRC Libraries and Archives Report Project and the associated mapping and timeline application, featuring Patricia Demers (Professor, Department of English and Film Studies, University of Alberta, and Chair, Royal Society of Canada Expert Panel on The Status and Future of Canada's Libraries and Archives), with two very brief (and silent) appearances by me. Length: 00:03:56. Location: Department of English and Film Studies, University of Alberta. Date: June 2014. Videographer: Ariel Bissett. <a href="/videos/rsc-libraries-archives.mp4" target="_blank">Watch video</a>. <button onclick="document.getElementById('myDialog').close()">Close</button>
+    </dialog>
 </p>
 <p class="dinkus" role="separator" aria-label="Dinkus section break">
     ---

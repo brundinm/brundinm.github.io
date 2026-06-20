@@ -14,3 +14,4 @@ gem 'connection_pool', '2.5.0'
 gem 'csv'
 gem 'bigdecimal'
 gem 'tzinfo-data'
+gem "puma"
