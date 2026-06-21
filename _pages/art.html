@@ -30,6 +30,16 @@ ul li {
 .small-caps {
     font-variant: small-caps;
 }
+span.raised-cap {
+    display: inline-block;
+}
+span.raised-cap::first-letter {
+    font-size: 1.5em;
+    float: none;
+    vertical-align: baseline;
+    line-height: 0.5;
+    margin-right: 0.01em;
+}
 .dinkus1 {
     display: table;
     margin: auto;
@@ -247,8 +257,8 @@ ul li {
 
 <p class="drop-cap">
     T<span class="small-caps">wo whimsical</span> digital art collages, with a Latin inflection.<br />
-    &bull; Ars longa, vita brevis [Art is long, life is short]&thinsp;&mdash;&thinsp;Hippocrates (Hippocrates of Kos), <em>Aphorisms</em> I.1 (c. 400 BCE) &#10086;<br />
-    &bull; Ars adeo latet arte sua [Art is so hidden by its own art]&thinsp;&mdash;&thinsp;Ovid (Publius Ovidius Naso), <em>Metamorphoses</em> X.252 (c. 8 CE) &#10086;
+    &bull; <span class="raised-cap">A</span>rs longa, vita brevis [Art is long, life is short]&thinsp;&mdash;&thinsp;Hippocrates (Hippocrates of Kos), <em>Aphorisms</em> I.1 (c. 400 BCE) &#10086;<br />
+    &bull; <span class="raised-cap">A</span>rs adeo latet arte sua [Art is so hidden by its own art]&thinsp;&mdash;&thinsp;Ovid (Publius Ovidius Naso), <em>Metamorphoses</em> X.252 (c. 8 CE) &#10086;
 </p>
 
 <p class="dinkus1" role="separator" aria-label="Dinkus section break" tabindex="-1">
