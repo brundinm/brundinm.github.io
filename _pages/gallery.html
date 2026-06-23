@@ -38,7 +38,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-	transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .screenshot:hover {
     transform: scale(1.5);
@@ -48,7 +48,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-	width: 100%;
+    width: 100%;
     max-width: 500px;
     aspect-ratio: 500 / 300;
 }
@@ -77,7 +77,7 @@ dialog:modal {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-	width: 100%;
+    width: 100%;
     max-width: 500px;
 }
 dialog::backdrop {
@@ -104,7 +104,7 @@ dialog::backdrop {
 <p>
     Canada's Libraries and Archives: RSC Expert Panel on The Status and Future of Canada's Libraries and Archives. Developed the CWRC-hosted Royal Society of Canada (RSC) Expert Panel on The Status and Future of Canada's Libraries and Archives mapping and timeline application, which used the SIMILE Exhibit data publishing framework to display the location of, and the year of establishment for, many of the libraries and archives of Canada; the visualization application was included as part of the RSC Expert Panel's report <em>The Future Now: Canada's Libraries, Archives, and Public Memory</em> (Royal Society of Canada; 2014). CWRC (the Collaboratory for Writing and Research on Culture, formerly the Canadian Writing Research Collaboratory) is a national digital content platform with allied research tools to support the study and preservation of Canadian literary and cultural history. (A short video about the project can be accessed <a href="#" onclick="document.getElementById('myDialog').showModal(); return false;">here</a>.) (2014).<br />
     <img class="screenshot" src="/images/rsc-libraries-archives.png" alt="Screenshot image of the libraries and archives mapping and timeline application" width="500" height="300">
-	<dialog id="myDialog">
+    <dialog id="myDialog">
     A short video providing an overview of the RSC-SRC Libraries and Archives Report Project and the associated mapping and timeline application, featuring Patricia Demers (Professor, Department of English and Film Studies, University of Alberta, and Chair, Royal Society of Canada Expert Panel on The Status and Future of Canada's Libraries and Archives), with two very brief (and silent) appearances by me&mdash;my sole role was to assist in demoing the mapping and timeline application. Length: 00:03:56 (3 minutes and 56 seconds). Location: Department of English and Film Studies, University of Alberta. Date: June 2014. Videographer: Ariel Bissett.<br /> <a href="/videos/rsc-libraries-archives.mp4" target="_blank">Watch&nbsp;video</a>. <button onclick="document.getElementById('myDialog').close()">Close</button>
     </dialog>
 </p>
@@ -147,9 +147,16 @@ dialog::backdrop {
     ---
 </p>
 <p>
+    University of Alberta Libraries Bindery Database. Designed and created a Microsoft Access and VBA bindery database application to automate the bindery process at the University of Alberta Libraries. In addition to the core workflow features needed to process print periodicals for shipment to the binderies to be bound, the Bindery Database also outputted lists of periodicals that were at the binderies for each unit library. These lists were available on the University of Alberta Libraries website for staff and patrons to consult, and the information contained in each list consisted of the following: title, enumeration (e.g., volume, year, pagination), and date the periodical was sent to the bindery. The University of Alberta Libraries Bindery Database was implemented in December 1997, and it is still in production 28 years later! (1997&ndash;2004)<br />
+    <img class="screenshot" src="/images/ual-binderies-hss.png" alt="Screenshot image of HSS periodicals at the binderies" width="500" height="300">
+</p>
+<p class="dinkus" role="separator" aria-label="Dinkus section break">
+    ---
+</p>
+<p>
     Experimental library catalog. Developed an experimental web-based library catalog for a reference book collection using Perl CGI scripts and SSI directives at the School of Library and Information Studies, University of Alberta. Reference collection catalog features included field-specific searching (title, author, subject), Boolean operator applied searching (AND, OR), and string phrase searching (exact query phrase); an experimental search interface to facilitate subject searching of the catalog by using a thesaurus of hyperlinked LCSH subject terms; and logging of both catalog web page visits as well as catalog search queries, thus making possible user activity analyses and transaction log analyses. (1997&ndash;1998).<br />
-	<div class="catalog-container">
+    <div class="catalog-container">
         <img class="verso" src="/images/library-catalog-verso.png" alt="Screenshot image of experimental library catalog" width="500" height="300">
-	    <img class="recto" src="/images/library-catalog-recto.png" alt="Screenshot image of experimental library catalog" width="500" height="300">
+        <img class="recto" src="/images/library-catalog-recto.png" alt="Screenshot image of experimental library catalog" width="500" height="300">
     </div>
 </p>
