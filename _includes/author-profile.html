@@ -208,10 +208,8 @@ startDST.setDate(1 + 7 - startDST.getDay());
 var endDST = new Date(curYear.getFullYear(), 9, 31);
 endDST.setDate(31 - endDST.getDay());
 Date.prototype.packed = function() {
-    with(this) {
-        return getFullYear() << 16 | getMonth() << 8 | getDate();
-    }
-}
+    return (this.getFullYear() << 16) | (this.getMonth() << 8) | this.getDate();
+};
 var myDate = new Date();
 if (startDST.packed() < myDate.packed() && 
         myDate.packed() < endDST.packed()) {
