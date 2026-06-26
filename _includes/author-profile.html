@@ -193,6 +193,16 @@
     font-size : 10px;
 	line-height: 1.2;
 }
+body.dark-mode .weather-header,
+html[data-theme="dark"] .weather-header,
+.dark-mode .weather-header {
+    color: #ffffff !important;
+}
+body.dark-mode .weather-data,
+html[data-theme="dark"] .weather-data,
+.dark-mode .weather-data {
+    color: #ffffff !important;
+}
 </style>
 
 <script language="JavaScript"
@@ -265,7 +275,7 @@ if (typeof(temperature) == "undefined" || typeof(wind_dir) == "undefined" ||
 }
 </script>
 
-<p>
+<p class="author-weather">
     <span class="weather-header">
         <script language="JavaScript" type="text/javascript">
             document.write(weatherHeader);
