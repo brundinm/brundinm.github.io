@@ -212,6 +212,8 @@
 
 .author__bio {
   margin: 0;
+  /* MRB: added line below to reduce vertical spacing in job title */
+  line-height: 1;
 
   @include breakpoint($large) {
     margin-top: 10px;
