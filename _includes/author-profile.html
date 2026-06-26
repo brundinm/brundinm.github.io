@@ -231,7 +231,7 @@ if (startDST.packed() < myDate.packed() &&
 if (typeof(temperature) == "undefined" || typeof(wind_dir) == "undefined" || 
         typeof(wind_spd) == "undefined" || typeof(relHum) == "undefined" || 
         typeof(kPa) == "undefined" || typeof(timeRecorded) == "undefined") {
-    var weatherData = "&#183; The Department of Earth & Atmospheric "+
+    var weatherData = "&bull; The U of A Department of Earth & Atmospheric "+
             "Sciences weather data service is currently unavailable.";
 } else {
     var timeRecordedArray = timeRecorded.split(" ");
@@ -266,7 +266,7 @@ if (typeof(temperature) == "undefined" || typeof(wind_dir) == "undefined" ||
         rMonth = "Dec";
     }
     var rDay = rDateArray[2];
-    var weatherData = "&bull; Temp.: " + temperature + "&#176;C<br />" +
+    var weatherData = "&bull; Temperature: " + temperature + "&#176;C<br />" +
             "&bull; Wind: " + wind_dir + " " + wind_spd + " m/s<br />" +
             "&bull; Humidity: " + relHum + "&#37;<br />" +
             "&bull; Pressure: " + kPa + " kPa<br />" +
