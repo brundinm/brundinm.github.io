@@ -200,9 +200,6 @@ src="https://easweb.eas.ualberta.ca/weather_service.php?js"
 type="text/javascript"></script>
 
 <script>
-// Internal JavaScript
-// JavaScript variable to contain the dash
-var dash = "----------------------------";
 /* JavaScript variable to contain the weather header */
 var weatherHeader = "Edmonton Weather<br />";
 
@@ -294,16 +291,12 @@ if (typeof(temperature) == "undefined" || typeof(wind_dir) == "undefined" ||
 <p>
     <span class="weather-header">
         <script language="JavaScript" type="text/javascript">
-        <!-- Begin
-        document.write(weatherHeader);
-        // End -->
+            document.write(weatherHeader);
         </script>
     </span>
     <span class="weather-data">
         <script language="JavaScript" type="text/javascript">
-        <!-- Begin
-        document.write(weatherData);
-        // End -->
+            document.write(weatherData);
         </script>
     </span>
 </p>
