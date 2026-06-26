@@ -196,6 +196,7 @@
   display: none;
   @media screen and (min-width: 1024px) {
     display: block;
+	/* MRB: added line below to increase vertical spacing between Location and Email */
     margin-bottom: 5px;
   }
 }
