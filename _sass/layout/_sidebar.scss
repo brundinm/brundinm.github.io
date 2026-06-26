@@ -210,6 +210,8 @@
 
 .author__bio {
   margin: 0;
+  /* MRB: Reduce vertical spacing */
+  line-height: 1;
 
   @include breakpoint($large) {
     margin-top: 10px;

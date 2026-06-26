@@ -173,4 +173,139 @@
       {% endif %}      
     </ul>
   </div>
+
+<!-- MRB code -->
+<style>
+/* Internal CSS */
+.weather-header {
+    display: block;
+    color : #000000;
+    font-family : Roboto, sans-serif;
+    font-size : 12px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.weather-data {
+    display: block;
+    color : #000000;
+    font-family : Roboto, sans-serif;
+    font-size : 10px;
+	line-height: 1.2;
+}
+</style>
+
+<!-- External JavaScript file -->
+<script language="JavaScript"
+src="https://easweb.eas.ualberta.ca/weather_service.php?js"
+type="text/javascript"></script>
+
+<script>
+// Internal JavaScript
+// JavaScript variable to contain the dash
+var dash = "----------------------------";
+/* JavaScript variable to contain the weather header */
+var weatherHeader = "Edmonton Weather<br />";
+
+// code to calculate if Daylight Saving Time is in effect
+var curYear = new Date();
+var startDST = new Date(curYear.getFullYear(), 3, 1);
+startDST.setDate(1 + 7 - startDST.getDay());
+var endDST = new Date(curYear.getFullYear(), 9, 31);
+endDST.setDate(31 - endDST.getDay());
+Date.prototype.packed = function() {
+    with(this) {
+        return getFullYear() << 16 | getMonth() << 8 | getDate();
+    }
+}
+var myDate = new Date();
+if (startDST.packed() < myDate.packed() && 
+        myDate.packed() < endDST.packed()) {
+    var timeZone = " MDT";
+} else {
+    var timeZone = " MST";
+}
+
+/*
+ * the following U of A Campus weather variables are referenced
+ * from the external JavaScript file located at
+ * https://easweb.eas.ualberta.ca/weather_service.php?js:
+ *
+ * - temperature (temperature in degrees Celsius)
+ * - wind_dir (wind direction)
+ * - wind_spd (wind speed in meters per second)
+ * - relHum (relative humidity in percent)
+ * - kPa (barometric pressure in kiloPascals)
+ * - timeRecorded (date and time the weather data was last recorded)
+ *
+ * (See the Department of Earth & Atmospheric Sciences Web page
+ * at https://www.ualberta.ca/en/earth-sciences/facilities/weather.html
+ * for more information.)
+ */
+
+// JavaScript variable to contain the weather data
+if (typeof(temperature) == "undefined" || typeof(wind_dir) == "undefined" || 
+        typeof(wind_spd) == "undefined" || typeof(relHum) == "undefined" || 
+        typeof(kPa) == "undefined" || typeof(timeRecorded) == "undefined") {
+    var weatherData = "&#183; The Department of Earth & Atmospheric "+
+            "Sciences weather data service is currently unavailable.";
+} else {
+    var timeRecordedArray = timeRecorded.split(" ");
+    var rDate = timeRecordedArray[0];
+    var rTime = timeRecordedArray[1];
+    var rDateArray = rDate.split("/");
+    var rYear = rDateArray[0];
+    var rMonth = rDateArray[1];
+// convert 2-digit month to 3-letter month
+    if (rMonth == "01") {
+        rMonth = "Jan";
+    } else if (rMonth == "02") {
+        rMonth = "Feb";
+    } else if (rMonth == "03") {
+        rMonth = "Mar";
+    } else if (rMonth == "04") {
+        rMonth = "Apr";
+    } else if (rMonth == "05") {
+        rMonth = "May";
+    } else if (rMonth == "06") {
+        rMonth = "Jun";
+    } else if (rMonth == "07") {
+        rMonth = "Jul";
+    } else if (rMonth == "08") {
+        rMonth = "Aug";
+    } else if (rMonth == "09") {
+        rMonth = "Sep";
+    } else if (rMonth == "10") {
+        rMonth = "Oct";
+    } else if (rMonth == "11") {
+        rMonth = "Nov";
+    } else if (rMonth == "12") {
+        rMonth = "Dec";
+    }
+    var rDay = rDateArray[2];
+    var weatherData = "&bull; Temp.: " + temperature + "&#176;C<br />" +
+            "&bull; Wind: " + wind_dir + " " + wind_spd + " m/s<br />" +
+            "&bull; Humidity: " + relHum + "&#37;<br />" +
+            "&bull; Pressure: " + kPa + " kPa<br />" +
+            "<em>Recorded at " + rTime + timeZone + "<br />" +
+            "on " + rDay + "-" + rMonth + "-" + rYear + "</em>";
+}
+</script>
+
+<p>
+<span class="weather-header">
+<script language="JavaScript" type="text/javascript">
+<!-- Begin
+document.write(weatherHeader);
+// End -->
+</script>
+</span>
+<span class="weather-data">
+<script language="JavaScript" type="text/javascript">
+<!-- Begin
+document.write(weatherData);
+// End -->
+</script>
+</span>
+</p>
+
 </div>
