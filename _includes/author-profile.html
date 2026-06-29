@@ -178,30 +178,96 @@
 
 <style>
 /* Internal CSS */
+.weather__urls-wrapper {
+    margin-top: 15px;
+    position: relative; /* Establishes a boundary for the absolute floating box */
+}
+
+/* Make the button shrink-to-fit its label text */
+.weather__urls-wrapper .btn {
+    display: inline-block;
+    width: auto;
+    padding: 0.5em 1em; 
+}
+
+/* Callout box appearance on mobile viewports */
+.weather__urls {
+    display: none;
+    padding: 4px 10px; /* Extra tight padding inside the box */
+    border: 1px solid var(--global-border-color, #f2f3f3);
+    border-radius: 4px;
+    margin-top: 4px; 
+    background-color: var(--global-bg-color, #ffffff); 
+    
+    /* Floating Behavior Configuration */
+    position: absolute;
+    left: 0;
+    z-index: 10; 
+    
+    /* Shrinks the callout width to only fit its internal text content */
+    width: max-content; 
+    max-width: 100vw; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* Neutralize the paragraph tag's built-in theme margins */
+.weather__urls .author-weather {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.weather__urls.is-visible {
+    display: block;
+}
+
+/* Precise Desktop Breakpoint matching your theme's exact 924px layout switch */
+@media (min-width: 924px) {
+    .weather__urls-wrapper .btn {
+        display: none !important; /* Hides the Weather button at exactly 924px and wider */
+    }
+    .weather__urls {
+        display: block !important; /* Always displays the text inline on desktop */
+        position: static; 
+        padding: 0;
+        border: none;
+        margin-top: 0;
+        background-color: transparent !important; /* Forces transparency on desktop */
+        width: auto; 
+        max-width: none;
+        box-shadow: none !important; /* Clear theme's underlying container shadow */
+        filter: none !important;     /* Extra fallback for any theme CSS filters */
+    }
+}
+
 .weather-header {
     display: block;
-    color : #000000;
-    font-family : Roboto, sans-serif;
-    font-size : 10px;
+    color: inherit; 
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
     font-weight: bold;
     line-height: 1.2;
+    margin-bottom: 4px;
 }
 .weather-data {
     display: block;
-    color : #000000;
-    font-family : Roboto, sans-serif;
-    font-size : 10px;
-	line-height: 1.2;
+    color: inherit; 
+    font-family: Roboto, sans-serif;
+    font-size: 10px;
+    line-height: 1.2;
 }
-body.dark-mode .weather-header,
-html[data-theme="dark"] .weather-header,
-.dark-mode .weather-header {
-    color: #ffffff !important;
+
+/* --- Dark Mode Variables Overrides --- */
+@media (prefers-color-scheme: dark) {
+    .weather__urls {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
 }
-body.dark-mode .weather-data,
-html[data-theme="dark"] .weather-data,
-.dark-mode .weather-data {
-    color: #ffffff !important;
+
+/* Overwrite theme explicit tags globally if layout classes exist */
+body.dark-mode .weather__urls,
+html[data-theme="dark"] .weather__urls,
+.dark-mode .weather__urls {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 </style>
 
@@ -275,17 +341,38 @@ if (typeof(temperature) == "undefined" || typeof(wind_dir) == "undefined" ||
 }
 </script>
 
-<p class="author-weather">
-    <span class="weather-header">
-        <script language="JavaScript" type="text/javascript">
-            document.write(weatherHeader);
-        </script>
-    </span>
-    <span class="weather-data">
-        <script language="JavaScript" type="text/javascript">
-            document.write(weatherData);
-        </script>
-    </span>
-</p>
+<div class="weather__urls-wrapper">
+  <button class="btn btn--inverse js-weather-toggle">Weather</button>
+  
+  <div class="weather__urls">
+    <p class="author-weather">
+        <span class="weather-header">
+            <script language="JavaScript" type="text/javascript">
+                document.write(weatherHeader);
+            </script>
+        </span>
+        <span class="weather-data">
+            <script language="JavaScript" type="text/javascript">
+                document.write(weatherData);
+            </script>
+        </span>
+    </p>
+  </div>
+</div>
+
+<script>
+// Toggle functional behavior for mobile viewports
+document.addEventListener("DOMContentLoaded", function() {
+  var weatherBtn = document.querySelector('.js-weather-toggle');
+  var weatherContent = document.querySelector('.weather__urls');
+  
+  if (weatherBtn && weatherContent) {
+    weatherBtn.addEventListener('click', function() {
+      weatherContent.classList.toggle('is-visible');
+      weatherBtn.classList.toggle('open');
+    });
+  }
+});
+</script>
 
 </div>
