@@ -76,16 +76,36 @@
   white-space: nowrap;
 }
 
-/*
-MRB: 29-Jun-2026: Fix wide margins when in resizable browser window
-Expand the maximum width of the primary site container
+/* MRB: Fix wide margins on resized windows, but keep 100% when maximized */
+/* 1. Expand the outermost container and set responsive padding */
 #main {
-  max-width: 95% !important; /* Forces the layout to occupy 95% of the window width
+  max-width: 100% !important;
+  /* Mobile-first approach: Give mobile screens comfortable padding */
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
-Optional: Make the main content area wider within that container
-.page {
-  @media (min-width: 64em) {
-    width: 80% !important; Pulls the content further into the right/left blank margins
+
+/* Adjust padding for larger desktop screens if 2% was preferred there */
+@media (min-width: 64em) {
+  #main {
+    padding-left: 2% !important;
+    padding-right: 2% !important;
   }
 }
-*/
+/* 2. Target the grid wrapper that holds BOTH the sidebar and main content */
+.wrapper {
+  max-width: 100% !important;
+}
+/* 3. Safely widen the main content column on desktop screens */
+@media (min-width: 64em) {
+  .page {
+    width: 78% !important; 
+    max-width: 100% !important;
+  }
+}
+/* 4. When fully maximized on large screens, let it expand all the way */
+@media (min-width: 87.5em) {
+  .page {
+    width: 82% !important;
+  }
+}
