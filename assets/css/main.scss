@@ -45,22 +45,22 @@
 /* MRB: 09-Jun-2026: Reduce vertical space between HTML elements */
 /* Reduce vertical spacing in author bio in the left sidebar */
 .author__bio {
-    line-height: 1;
+  line-height: 1;
 }
 /* Reduce vertical spacing between author links in the left sidebar */
 .author__urls {
-    li {
-	    line-height: 1;
-		margin-top: 0em;
-        margin-bottom: 0em;
-    }
+  li {
+    line-height: 1;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
 }
 /* Reduce vertical spacing in the bottom footer */
 .page__footer {
-    footer {
-        margin-top: 0em;
-		padding: 0 1em 0 1em;
-    }
+  footer {
+    margin-top: 0em;
+    padding: 0 1em 0 1em;
+  }
 }
 
 /* MRB: 27-Jun-2026: Fix left sidebar author profile links */
@@ -68,10 +68,24 @@
 .sidebar .author__urls-wrapper .author__urls a,
 .sidebar .author__urls-wrapper .author__urls .aria-hidden,
 .author__urls.social-icons a {
-    display: inline-block !important;
-    width: auto !important;
+  display: inline-block !important;
+  width: auto !important;
 }
 /* Ensure the list item icon and text stay properly aligned */
 .sidebar .author__urls-wrapper .author__urls li {
   white-space: nowrap;
 }
+
+/*
+MRB: 29-Jun-2026: Fix wide margins when in resizable browser window
+Expand the maximum width of the primary site container
+#main {
+  max-width: 95% !important; /* Forces the layout to occupy 95% of the window width
+}
+Optional: Make the main content area wider within that container
+.page {
+  @media (min-width: 64em) {
+    width: 80% !important; Pulls the content further into the right/left blank margins
+  }
+}
+*/

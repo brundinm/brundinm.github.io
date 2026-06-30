@@ -34,6 +34,7 @@
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
       {% endif %}
       {% if author.email %}
+	    <!-- MRB: changed link label -->
         <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i> brundinm@macewan.ca</a></li>
       {% endif %}
 
@@ -48,6 +49,7 @@
         <li><a href="https://dribbble.com/{{ author.dribbble }}"><i class="fab fa-fw fa-dribbble icon-pad-right" aria-hidden="true"></i>Dribbble</a></li>
       {% endif %}      
       {% if author.github %}
+	    <!-- MRB: changed link label -->
         <li><a href="https://github.com/{{ author.github }}" target="_blank"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub profile</a></li>
       {% endif %}
       {% if author.kaggle %}
@@ -65,6 +67,7 @@
         <li><a href="{{ author.arxiv }}"><i class="ai ai-arxiv ai-fw icon-pad-right"></i>arXiv</a></li>
       {% endif %}      
       {% if author.googlescholar %}
+	    <!-- MRB: changed link label -->
         <li><a href="{{ author.googlescholar }}" target="_blank"><i class="ai ai-google-scholar ai-fw icon-pad-right"></i>Google Scholar profile</a></li>
       {% endif %}
       {% if author.inspire-hep %}
@@ -74,6 +77,7 @@
         <li><a href="{{ author.impactstory }}"><i class="ai ai-impactstory ai-fw icon-pad-right"></i>Impactstory</a></li>
       {% endif %}
       {% if author.orcid %}
+	    <!-- MRB: changed link label -->
         <li><a href="{{ author.orcid }}" target="_blank"><i class="ai ai-orcid ai-fw icon-pad-right"></i>ORCID profile</a></li>
       {% endif %}
       {% if author.pubmed %}
@@ -174,100 +178,99 @@
     </ul>
   </div>
 
-<!-- MRB code -->
+<!-- MRB: code to display U of A weather data -->
 
 <style>
-/* Internal CSS */
 .weather__urls-wrapper {
-    margin-top: 15px;
-    position: relative; /* Establishes a boundary for the absolute floating box */
+  margin-top: 15px;
+  position: relative; /* Establishes a boundary for the absolute floating box */
 }
 
 /* Make the button shrink-to-fit its label text */
 .weather__urls-wrapper .btn {
-    display: inline-block;
-    width: auto;
-    padding: 0.5em 1em; 
+  display: inline-block;
+  width: auto;
+  padding: 0.5em 1em; 
 }
 
 /* Callout box appearance on mobile viewports */
 .weather__urls {
-    display: none;
-    padding: 4px 10px; /* Extra tight padding inside the box */
-    border: 1px solid var(--global-border-color, #f2f3f3);
-    border-radius: 4px;
-    margin-top: 4px; 
-    background-color: var(--global-bg-color, #ffffff); 
-    
-    /* Floating Behavior Configuration */
-    position: absolute;
-    left: 0;
-    z-index: 10; 
-    
-    /* Shrinks the callout width to only fit its internal text content */
-    width: max-content; 
-    max-width: 100vw; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  display: none;
+  padding: 4px 10px; /* Extra tight padding inside the box */
+  border: 1px solid var(--global-border-color, #f2f3f3);
+  border-radius: 4px;
+  margin-top: 4px; 
+  background-color: var(--global-bg-color, #ffffff); 
+  
+  /* Floating Behavior Configuration */
+  position: absolute;
+  left: 0;
+  z-index: 10; 
+  
+  /* Shrinks the callout width to only fit its internal text content */
+  width: max-content; 
+  max-width: 100vw; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 /* Neutralize the paragraph tag's built-in theme margins */
 .weather__urls .author-weather {
-    margin: 0 !important;
-    padding: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .weather__urls.is-visible {
-    display: block;
+  display: block;
 }
 
-/* Precise Desktop Breakpoint matching your theme's exact 924px layout switch */
-@media (min-width: 924px) {
-    .weather__urls-wrapper .btn {
-        display: none !important; /* Hides the Weather button at exactly 924px and wider */
-    }
-    .weather__urls {
-        display: block !important; /* Always displays the text inline on desktop */
-        position: static; 
-        padding: 0;
-        border: none;
-        margin-top: 0;
-        background-color: transparent !important; /* Forces transparency on desktop */
-        width: auto; 
-        max-width: none;
-        box-shadow: none !important; /* Clear theme's underlying container shadow */
-        filter: none !important;     /* Extra fallback for any theme CSS filters */
-    }
+/* Precise desktop breakpoint matching theme's exact 925px layout switch */
+@media (min-width: 925px) {
+  .weather__urls-wrapper .btn {
+    display: none !important; /* Hides the Weather button at exactly 925px and wider */
+  }
+  .weather__urls {
+    display: block !important; /* Always displays the text inline on desktop */
+    position: static; 
+    padding: 0;
+    border: none;
+    margin-top: 0;
+    background-color: transparent !important; /* Forces transparency on desktop */
+    width: auto; 
+    max-width: none;
+    box-shadow: none !important; /* Clear theme's underlying container shadow */
+    filter: none !important; /* Extra fallback for any theme CSS filters */
+  }
 }
 
 .weather-header {
-    display: block;
-    color: inherit; 
-    font-family: Roboto, sans-serif;
-    font-size: 10px;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 4px;
+  display: block;
+  color: inherit; 
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 4px;
 }
 .weather-data {
-    display: block;
-    color: inherit; 
-    font-family: Roboto, sans-serif;
-    font-size: 10px;
-    line-height: 1.2;
+  display: block;
+  color: inherit; 
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  line-height: 1.2;
 }
 
-/* --- Dark Mode Variables Overrides --- */
+/* --- Dark mode variables overrides --- */
 @media (prefers-color-scheme: dark) {
-    .weather__urls {
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    }
+  .weather__urls {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
 }
 
 /* Overwrite theme explicit tags globally if layout classes exist */
 body.dark-mode .weather__urls,
 html[data-theme="dark"] .weather__urls,
 .dark-mode .weather__urls {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 </style>
 
@@ -284,60 +287,60 @@ startDST.setDate(1 + 7 - startDST.getDay());
 var endDST = new Date(curYear.getFullYear(), 9, 31);
 endDST.setDate(31 - endDST.getDay());
 Date.prototype.packed = function() {
-    return (this.getFullYear() << 16) | (this.getMonth() << 8) | this.getDate();
+  return (this.getFullYear() << 16) | (this.getMonth() << 8) | this.getDate();
 };
 var myDate = new Date();
 if (startDST.packed() < myDate.packed() && 
-        myDate.packed() < endDST.packed()) {
-    var timeZone = " MDT";
+    myDate.packed() < endDST.packed()) {
+  var timeZone = " MDT";
 } else {
-    var timeZone = " MST";
+  var timeZone = " MST";
 }
 
 if (typeof(temperature) == "undefined" || typeof(wind_dir) == "undefined" || 
-        typeof(wind_spd) == "undefined" || typeof(relHum) == "undefined" || 
-        typeof(kPa) == "undefined" || typeof(timeRecorded) == "undefined") {
-    var weatherData = "&bull; The U of A Department of Earth & Atmospheric "+
-            "Sciences weather data service is currently unavailable.";
+    typeof(wind_spd) == "undefined" || typeof(relHum) == "undefined" || 
+    typeof(kPa) == "undefined" || typeof(timeRecorded) == "undefined") {
+  var weatherData = "&bull; The U of A Department of Earth & Atmospheric "+
+      "Sciences weather data service is currently unavailable.";
 } else {
-    var timeRecordedArray = timeRecorded.split(" ");
-    var rDate = timeRecordedArray[0];
-    var rTime = timeRecordedArray[1];
-    var rDateArray = rDate.split("/");
-    var rYear = rDateArray[0];
-    var rMonth = rDateArray[1];
-    if (rMonth == "01") {
-        rMonth = "Jan";
-    } else if (rMonth == "02") {
-        rMonth = "Feb";
-    } else if (rMonth == "03") {
-        rMonth = "Mar";
-    } else if (rMonth == "04") {
-        rMonth = "Apr";
-    } else if (rMonth == "05") {
-        rMonth = "May";
-    } else if (rMonth == "06") {
-        rMonth = "Jun";
-    } else if (rMonth == "07") {
-        rMonth = "Jul";
-    } else if (rMonth == "08") {
-        rMonth = "Aug";
-    } else if (rMonth == "09") {
-        rMonth = "Sep";
-    } else if (rMonth == "10") {
-        rMonth = "Oct";
-    } else if (rMonth == "11") {
-        rMonth = "Nov";
-    } else if (rMonth == "12") {
-        rMonth = "Dec";
-    }
-    var rDay = rDateArray[2];
-    var weatherData = "&bull; Temperature: " + temperature + "&#176;C<br />" +
-            "&bull; Wind: " + wind_dir + " " + wind_spd + " m/s<br />" +
-            "&bull; Humidity: " + relHum + "&#37;<br />" +
-            "&bull; Pressure: " + kPa + " kPa<br />" +
-            "<em>Recorded at " + rTime + timeZone + "<br />" +
-            "on " + rDay + "-" + rMonth + "-" + rYear + "</em>";
+  var timeRecordedArray = timeRecorded.split(" ");
+  var rDate = timeRecordedArray[0];
+  var rTime = timeRecordedArray[1];
+  var rDateArray = rDate.split("/");
+  var rYear = rDateArray[0];
+  var rMonth = rDateArray[1];
+  if (rMonth == "01") {
+    rMonth = "Jan";
+  } else if (rMonth == "02") {
+    rMonth = "Feb";
+  } else if (rMonth == "03") {
+    rMonth = "Mar";
+  } else if (rMonth == "04") {
+    rMonth = "Apr";
+  } else if (rMonth == "05") {
+    rMonth = "May";
+  } else if (rMonth == "06") {
+    rMonth = "Jun";
+  } else if (rMonth == "07") {
+    rMonth = "Jul";
+  } else if (rMonth == "08") {
+    rMonth = "Aug";
+  } else if (rMonth == "09") {
+    rMonth = "Sep";
+  } else if (rMonth == "10") {
+    rMonth = "Oct";
+  } else if (rMonth == "11") {
+    rMonth = "Nov";
+  } else if (rMonth == "12") {
+    rMonth = "Dec";
+  }
+  var rDay = rDateArray[2];
+  var weatherData = "&bull; Temperature: " + temperature + "&#176;C<br />" +
+      "&bull; Wind: " + wind_dir + " " + wind_spd + " m/s<br />" +
+      "&bull; Humidity: " + relHum + "&#37;<br />" +
+      "&bull; Pressure: " + kPa + " kPa<br />" +
+      "<em>Recorded at " + rTime + timeZone + "<br />" +
+      "on " + rDay + "-" + rMonth + "-" + rYear + "</em>";
 }
 </script>
 
@@ -346,16 +349,16 @@ if (typeof(temperature) == "undefined" || typeof(wind_dir) == "undefined" ||
   
   <div class="weather__urls">
     <p class="author-weather">
-        <span class="weather-header">
-            <script language="JavaScript" type="text/javascript">
-                document.write(weatherHeader);
-            </script>
-        </span>
-        <span class="weather-data">
-            <script language="JavaScript" type="text/javascript">
-                document.write(weatherData);
-            </script>
-        </span>
+      <span class="weather-header">
+        <script language="JavaScript" type="text/javascript">
+          document.write(weatherHeader);
+        </script>
+      </span>
+      <span class="weather-data">
+        <script language="JavaScript" type="text/javascript">
+          document.write(weatherData);
+        </script>
+      </span>
     </p>
   </div>
 </div>
@@ -375,4 +378,5 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+<!-- Close author profile left sidebar opening div -->
 </div>
