@@ -19,23 +19,20 @@ ul li {
   margin-top: 0.2em;
   margin-bottom: 0.2em;
 }
-/* Default styles for wide screens (2 columns) */
 .column-container {
   column-count: 2;
-  column-gap: 30px; /* Adjust the spacing between columns as needed */
+  column-gap: 30px;
 }
-/* The class to force a column break */
 .force-break {
-  break-after: column; /* Forces the next element into the second column */
+  break-after: column;
 }
-/* Media query to collapse into 1 column at 924px or narrower */
 @media (max-width: 924px) {
   .column-container {
     column-count: 1;
   }
   .force-break {
-    break-after: auto; /* Cancels the column break */
-    display: none;     /* Hides the empty element to avoid unwanted vertical margin */
+    break-after: auto;
+    display: none;
   }
 }
 .drop-cap::first-letter {
