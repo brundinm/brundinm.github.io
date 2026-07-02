@@ -29,16 +29,15 @@ ul li {
   word-wrap: break-word;
   white-space: pre-wrap;
 }
-/* Base style: 1 column for mobile/narrow screens */
 .balanced-container {
   column-count: 1;
-  column-gap: 2rem; /* Adds space between columns */
+  column-gap: 2rem;
 }
-/* Responsive breakpoint: 2 columns for screens wider than 924px */
 @media (min-width: 925px) {
   .balanced-container {
     column-count: 2;
-    column-fill: balance; /* Ensures content is split equally */
+    column-gap: 2rem;
+    column-fill: balance;
   }
 }
 .balanced-container img,
