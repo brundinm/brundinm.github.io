@@ -196,7 +196,7 @@
   display: none;
   @media screen and (min-width: 1024px) {
     display: block;
-	/* MRB: added line below to increase vertical spacing between Location and Email */
+	/* MRB: Added line below to increase vertical spacing between Location and Email */
     margin-bottom: 5px;
   }
 }
@@ -212,7 +212,7 @@
 
 .author__bio {
   margin: 0;
-  /* MRB: added line below to reduce vertical spacing in job title */
+  /* MRB: Added line below to reduce vertical spacing in job title */
   line-height: 1;
 
   @include breakpoint($large) {
