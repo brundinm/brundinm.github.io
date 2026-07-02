@@ -42,7 +42,7 @@
     "vendor/font-awesome/brands"
 ;
 
-/* MRB: 09-Jun-2026: Reduce vertical space between HTML elements */
+/* MRB: Reduce vertical space between HTML elements */
 /* Reduce vertical spacing in author bio in the left sidebar */
 .author__bio {
   line-height: 1;
@@ -63,7 +63,7 @@
   }
 }
 
-/* MRB: 27-Jun-2026: Fix left sidebar author profile links */
+/* MRB: Fix left sidebar author profile links */
 /* Restrict clickable area to text only in academicpages sidebar */
 .sidebar .author__urls-wrapper .author__urls a,
 .sidebar .author__urls-wrapper .author__urls .aria-hidden,
@@ -84,7 +84,6 @@
   padding-left: 1rem !important;
   padding-right: 1rem !important;
 }
-
 /* Adjust padding for larger desktop screens if 2% was preferred there */
 @media (min-width: 64em) {
   #main {
