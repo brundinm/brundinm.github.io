@@ -42,6 +42,35 @@ img {
 .screenshot:hover {
   transform: scale(1.5);
 }
+.brundinm-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 500 / 300;
+}
+.brundinm-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+.droste-effect {
+  opacity: 0;
+}
+.brundinm-container:hover .mbrundin {
+  opacity: 0;
+}
+.brundinm-container:hover .droste-effect {
+  opacity: 1;
+  transform: scale(1.5);
+  transition: opacity 0.1s ease, transform 0.3s ease-out;
+}
 .catalog-container {
   display: block;
   margin-left: auto;
@@ -93,6 +122,16 @@ dialog::backdrop {
   * * *
 </p>
 
+<p>
+  Michael R. Brundin faculty website. Designed and developed my (Michael Brundin, Librarian [Faculty 2016&ndash;], MacEwan University Library, MacEwan University) faculty website. (2026).<br />
+  <div class="brundinm-container">
+    <img class="mbrundin" src="/images/brundinm.png" alt="Screenshot image of Michael Brundin's faculty website" width="500" height="300">
+    <img class="droste-effect" src="/images/brundinm-droste-effect.png" alt="Screenshot image of Michael Brundin's faculty website" width="500" height="300">
+  </div>
+</p>
+<p class="dinkus" role="separator" aria-label="Dinkus section break">
+  ---
+</p>
 <p>
   MacEwan University Library website redesign project. Managed and facilitated the MacEwan Library website redesign project, drafting a project charter document which provided the overview, scope, project plan, staffing, and issues associated with the planned website redesign project. Secured a contract with a website design company, Paper Leaf, and coordinated Paper Leaf development activities with our own website development efforts. Designed a website usability testing exercise, recruited student and faculty testers, conducted website usability testing sessions, coordinated focused website feedback sessions with Library staff, and communicated the testers' and staff feedback to the new website development team. The new website was successfully launched in August 2018, and it garnered many positive comments from both patrons and staff. (2017–2018).<br />
   <img class="screenshot" src="/images/macewan-library.png" alt="Screenshot image of the redesigned MacEwan University Library website" width="500" height="300">
