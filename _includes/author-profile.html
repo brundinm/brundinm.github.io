@@ -305,6 +305,8 @@ if (typeof(temperature) == "undefined" || typeof(wind_dir) == "undefined" ||
   var weatherData = "&bull; The U of A Department of Earth & Atmospheric "+
       "Sciences weather data service is currently unavailable.";
 } else {
+  var km_wind_spd = wind_spd * 3.6;
+  var km_wind_spd = (Math.round(km_wind_spd * 10) / 10).toFixed(1);
   var timeRecordedArray = timeRecorded.split(" ");
   var rDate = timeRecordedArray[0];
   var rTime = timeRecordedArray[1];
@@ -337,8 +339,8 @@ if (typeof(temperature) == "undefined" || typeof(wind_dir) == "undefined" ||
     rMonth = "Dec";
   }
   var rDay = rDateArray[2];
-  var weatherData = "&bull; Temperature: " + temperature + "&#176;C<br />" +
-      "&bull; Wind: " + wind_dir + " " + wind_spd + " m/s<br />" +
+  var weatherData = "&bull; Temperature: " + temperature + " &#176;C<br />" +
+      "&bull; Wind: " + wind_dir + " " + km_wind_spd + " km/h<br />" +
       "&bull; Humidity: " + relHum + "&#37;<br />" +
       "&bull; Pressure: " + kPa + " kPa<br />" +
       "<em>Recorded at " + rTime + timeZone + "<br />" +
