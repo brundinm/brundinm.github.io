@@ -63,6 +63,24 @@
   }
 }
 
+/* MRB: Change the footer font color */
+/* 1. Force Dark Charcoal Text strictly when Light Mode is active */
+html[data-theme="light"] .page__footer-copyright,
+html[data-theme="light"] .page__footer-copyright a,
+body.light .page__footer-copyright,
+body.light .page__footer-copyright a,
+html:not([data-theme="dark"]) body:not(.dark) .page__footer-copyright,
+html:not([data-theme="dark"]) body:not(.dark) .page__footer-copyright a {
+  color: #555555 !important;
+}
+/* 2. Force Light Grey Text strictly when Dark Mode is active */
+html[data-theme="dark"] .page__footer-copyright,
+html[data-theme="dark"] .page__footer-copyright a,
+body.dark .page__footer-copyright,
+body.dark .page__footer-copyright a {
+  color: #f4f4f5 !important;
+}
+
 /* MRB: Fix left sidebar author profile links */
 /* Restrict clickable area to text only in academicpages sidebar */
 .sidebar .author__urls-wrapper .author__urls a,
