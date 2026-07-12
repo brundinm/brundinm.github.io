@@ -19,3 +19,26 @@
 <!-- GoatCounter analytics -->
 <script data-goatcounter="https://brundinm.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+
+<!-- Track PDF views -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    /* Find all links on the page */
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      var href = links[i].getAttribute('href');
+      /* Check if the link goes to a PDF file */
+      if (href && href.endsWith('.pdf')) {
+        links[i].addEventListener('click', function (e) {
+          if (window.goatcounter && window.goatcounter.count) {
+            window.goatcounter.count({
+              path:  this.getAttribute('href'),
+              title: 'PDF Download: ' + (this.innerText || this.getAttribute('href')),
+              event: true, /* Marks this data as a custom event in my dashboard */
+            });
+          }
+        });
+      }
+    }
+  });
+</script>
