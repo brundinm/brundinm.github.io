@@ -55,3 +55,47 @@
     }
   });
 </script>
+
+<!-- MRB: In Art page, track hover events for dinkus1, dinkus2, and digital-clock -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  /* Ensure GoatCounter is fully loaded before binding events */
+  if (!window.goatcounter || !window.goatcounter.count) return;
+
+  /* 1. Track hover on <p class="dinkus1"> */
+  const dinkus1 = document.querySelector('p.dinkus1');
+  if (dinkus1) {
+    dinkus1.addEventListener('mouseenter', function () {
+      window.goatcounter.count({
+        path:  'hover-dinkus1',
+        title: 'Hovered dinkus1: ASCII art color swap',
+        event: true,
+      });
+    }, { once: true });
+  }
+
+  /* 2. Track hover on <p class="dinkus2"> */
+  const dinkus2 = document.querySelector('p.dinkus2');
+  if (dinkus2) {
+    dinkus2.addEventListener('mouseenter', function () {
+      window.goatcounter.count({
+        path:  'hover-dinkus2',
+        title: 'Hovered dinkus2: White Rabbit and analog clock opacity inversion',
+        event: true,
+      });
+    }, { once: true });
+  }
+
+  /* 3. Track hover on <pre class="digital-clock"> */
+  const digitalClock = document.querySelector('pre.digital-clock');
+  if (digitalClock) {
+    digitalClock.addEventListener('mouseenter', function () {
+      window.goatcounter.count({
+        path:  'hover-digital-clock',
+        title: 'Hovered digital-clock: tempus fugit and time flies swap',
+        event: true,
+      });
+    }, { once: true });
+  }
+});
+</script>
