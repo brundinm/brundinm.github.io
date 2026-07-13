@@ -25,6 +25,8 @@ ul li {
 }
 .force-break {
   break-after: column;
+  line-height: 0;
+  margin: 0;
 }
 @media (max-width: 924px) {
   .column-container {
@@ -164,6 +166,10 @@ span.raised-cap::first-letter {
     display: none;
   }
 }
+.container-dinkus2-white-rabbit {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
 .dinkus2 {
   display: table;
   margin: auto;
@@ -279,7 +285,7 @@ span.raised-cap::first-letter {
 </p>
 
 <p class="dinkus1" role="separator" aria-label="Dinkus section break" tabindex="-1">
-  * * *
+	* * *
 </p>
 
 <pre class="ascii-art1" role="img" aria-label="ASCII art of books created using preformatted text">      _ _
@@ -324,7 +330,9 @@ Discendo Floremus [Through learning we flourish]
        Discendo Floremus [Through learning we flourish]
 </pre>
 
-<p class="force-break"></p>
+<p class="force-break">&nbsp;</p>
+
+<div class="container-dinkus2-white-rabbit">
 
 <p class="dinkus2" role="separator" aria-label="Dinkus section break" tabindex="-1">
   * * *
@@ -352,6 +360,8 @@ fruit flies like a banana
 <p class="container-asterism">
   <span class="asterism" role="separator" aria-label="Asterism section break">&nbsp;</span>
 </p>
+
+</div>
 
 </div>
 
