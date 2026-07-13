@@ -16,29 +16,42 @@
 
 <!-- end custom head snippets -->
 
-<!-- GoatCounter analytics -->
+<!-- MRB: GoatCounter analytics for the 8 regular content pages -->
 <script data-goatcounter="https://brundinm.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-<!-- Track PDF views -->
+<!-- MRB: Track link clicks in GoatCounter, other than clicks to the 8 regular content pages -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    /* Find all links on the page */
     var links = document.getElementsByTagName('a');
+    /* Add the URL paths of the 8 regular content pages here */
+    var contentPages = ['/', '/publications/', '/presentations/', '/teaching/', '/service/', '/code/', '/gallery/', '/art/'];
+
     for (var i = 0; i < links.length; i++) {
-      var href = links[i].getAttribute('href');
-      /* Check if the link goes to a PDF file */
-      if (href && href.endsWith('.pdf')) {
-        links[i].addEventListener('click', function (e) {
-          if (window.goatcounter && window.goatcounter.count) {
-            window.goatcounter.count({
-              path:  this.getAttribute('href'),
-              title: 'PDF view: ' + (this.innerText || this.getAttribute('href')),
-              event: true, /* Marks this data as a custom event in my dashboard */
-            });
-          }
+      links[i].addEventListener('click', function (e) {
+        if (!window.goatcounter || !window.goatcounter.count) return;
+
+        var href = this.getAttribute('href');
+        /* Ignore empty links, page anchors (#), and mail links */
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:')) return;
+
+        /* Resolve link to get just the local pathname (e.g., "/presentations/") */
+        var targetUrl = new URL(this.href);
+        var path = targetUrl.pathname;
+
+        /* Ensure trailing slashes match your contentPages list format */
+        if (path !== '/' && !path.endsWith('/')) path += '/';
+
+        /* If the link points to one of the 8 regular pages, do not log an event */
+        if (targetUrl.hostname === window.location.hostname && contentPages.includes(path)) return;
+
+        /* Log everything else (external links and internal links) as a flat event */
+        window.goatcounter.count({
+          path:  href,
+          title: this.innerText.trim() || href,
+          event: true,
         });
-      }
+      });
     }
   });
 </script>
