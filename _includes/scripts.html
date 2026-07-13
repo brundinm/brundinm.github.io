@@ -4,8 +4,8 @@
 
 {% include comments-providers/scripts.html %}
 
-/* Fix for iOS Safari/Brave "stuck" mobile Profiles button and Weather button */
 <script>
+/* Fix for iOS Safari/Brave "stuck" mobile Profiles button and Weather button */
   document.addEventListener('click', function(event) {
     /* If the user clicks anywhere that isn't the Profiles button, force remove focus */
     if (!event.target.closest('.btn--wrapper .btn')) {
