@@ -20,6 +20,8 @@
 <script data-goatcounter="https://brundinm.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
+{% assign target_pages = "/,/publications/,/code/,/gallery/" | split: "," %}
+{% if target_pages contains page.url %}
 <!-- MRB: Track link clicks, but not clicks to the 8 regular content pages -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -35,7 +37,7 @@
         /* Ignore empty links, page anchors (#), and mail links */
         if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:')) return;
 
-        /* Resolve link to get just the local pathname (e.g., "/presentations/") */
+        /* Resolve link to get just the local pathname (e.g., "/publications/") */
         var targetUrl = new URL(this.href);
         var path = targetUrl.pathname;
 
@@ -55,6 +57,7 @@
     }
   });
 </script>
+{% endif %}
 
 {% if page.url == '/art/' %}
 <!-- MRB: Track hover events for dinkus1, dinkus2, and digital-clock -->
