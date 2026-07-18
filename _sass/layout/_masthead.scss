@@ -48,7 +48,7 @@
 
   ul {
     margin: 0;
-    padding: 0;
+    padding: 0px;
     clear: both;
     list-style-type: none;
   }
@@ -78,4 +78,25 @@
   color: var(--global-text-color);
   border-bottom: 2px solid var(--global-text-color);
   /* No need to repeat pointer-events and cursor here */
+}
+
+/* MRB: Code to narrow the height of the menu navigation bar */
+/* Target the links inside the visible menu list items */
+.masthead__menu-item a {
+  padding-top: 0.25em !important;    /* Forces the link box to shrink vertically */
+  padding-bottom: 0.25em !important; /* Can adjust up or down */
+  line-height: 1.2 !important;       /* Tightens the line-height of the text */
+}
+/* Remove default margins/padding from the menu lists themselves */
+.masthead__menu ul {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+/* When using the toggle button on mobile, shrink its hit-box too */
+.masthead__menu-toggle {
+  height: auto !important;
+  padding-top: 0.25em !important;
+  padding-bottom: 0.25em !important;
 }
