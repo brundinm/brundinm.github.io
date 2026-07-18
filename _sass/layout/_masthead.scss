@@ -81,22 +81,45 @@
 }
 
 /* MRB: Code to narrow the height of the menu navigation bar */
-/* Target the links inside the visible menu list items */
-.masthead__menu-item a {
-  padding-top: 0.25em !important;    /* Forces the link box to shrink vertically */
-  padding-bottom: 0.25em !important; /* Can adjust up or down */
-  line-height: 1.2 !important;       /* Tightens the line-height of the text */
+/* Target desktop views only */
+@media (min-width: 975px) {
+  /* Target the links inside the visible menu list items */
+  .masthead__menu-item a {
+    padding-top: 0.25em !important;    /* Forces the link box to shrink vertically */
+    padding-bottom: 0.25em !important; /* Can adjust up or down */
+    line-height: 1.2 !important;       /* Tightens the line-height of the text */
+  }
+  /* Remove default margins/padding from the menu lists themselves */
+  .masthead__menu ul {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  /* Force the toggle container to completely hide on desktop, 
+     preventing it from taking up structural space if the JS lags */
+  .masthead__menu-toggle {
+    display: none !important;
+  }
 }
-/* Remove default margins/padding from the menu lists themselves */
-.masthead__menu ul {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+/* Target mobile view specifically when the hamburger menu is toggled open */
+/* This restores comfortable spacing for touch targets on mobile */
+@media (max-width: 974px) {
+  .masthead__menu.is-open .masthead__menu-item a,
+  .masthead__menu ul.visible .masthead__menu-item a {
+    padding-top: 0.75em !important;   /* Increase vertical padding for mobile items */
+    padding-bottom: 0.75em !important;
+    line-height: 1.5 !important;
+  }
 }
-/* When using the toggle button on mobile, shrink its hit-box too */
-.masthead__menu-toggle {
-  height: auto !important;
-  padding-top: 0.25em !important;
-  padding-bottom: 0.25em !important;
+/* Adjust the hamburger toggle button alignment without breaking its position */
+@media (max-width: 974px) {
+  .masthead__menu-toggle {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important; /* Locks it dead-center vertically */
+    right: 1em !important;
+    padding: 0.5em !important;
+    display: block !important;
+  }
 }
