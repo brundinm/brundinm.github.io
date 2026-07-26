@@ -37,6 +37,25 @@ ul li {
     display: none;
   }
 }
+.euclid {
+  position: relative;
+}
+.euclid::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 125px; 
+  height: 138px;
+  background-image: url('/images/euclid-pythagorean-theorem.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
 .drop-cap::first-letter {
   float: left;
   font-size: 3em;
@@ -278,7 +297,7 @@ span.raised-cap::first-letter {
 
 <div class="column-container">
 
-<p class="drop-cap">
+<p class="euclid drop-cap">
   T<span class="small-caps">wo whimsical</span> digital art collages, with a Latin inflection.<br />
   &bull; <span class="raised-cap">A</span>rs longa, vita brevis [Art is long, life is short]&thinsp;&mdash;&thinsp;Hippocrates (Hippocrates of Kos), <em>Aphorisms</em> I.1 (c. 400 BCE) &#10086;<br />
   &bull; <span class="raised-cap">A</span>rs adeo latet arte sua [Art is so hidden by its own art]&thinsp;&mdash;&thinsp;Ovid (Publius Ovidius Naso), <em>Metamorphoses</em> X.252 (c. 8 CE) &#10086;
