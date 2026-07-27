@@ -37,13 +37,13 @@ ul li {
     display: none;
   }
 }
-.euclid {
+.euclid-wrapper {
   position: relative;
 }
-.euclid::before {
+.euclid-bg {
   content: "";
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 125px; 
@@ -53,8 +53,16 @@ ul li {
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.15;
+  transition: opacity 0.2s ease-in-out;
   pointer-events: none;
   z-index: 1;
+}
+.euclid-text {
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  display: inline-block;
 }
 .drop-cap::first-letter {
   float: left;
@@ -75,6 +83,17 @@ span.raised-cap::first-letter {
   vertical-align: baseline;
   line-height: 0.5;
   margin-right: 0.01em;
+}
+.hedera {
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+.euclid-wrapper:has(.hedera:hover) .euclid-text {
+  opacity: 0.15 !important;
+}
+.euclid-wrapper:has(.hedera:hover) .euclid-bg {
+  opacity: 1 !important;
 }
 .dinkus1 {
   display: table;
@@ -297,11 +316,14 @@ span.raised-cap::first-letter {
 
 <div class="column-container">
 
-<p class="euclid drop-cap">
+<div class="euclid-wrapper">
+<div class="euclid-bg"></div>
+<p class="drop-cap euclid-text">
   T<span class="small-caps">wo whimsical</span> digital art collages, with a Latin inflection.<br />
-  &bull; <span class="raised-cap">A</span>rs longa, vita brevis [Art is long, life is short]&thinsp;&mdash;&thinsp;Hippocrates (Hippocrates of Kos), <em>Aphorisms</em> I.1 (c. 400 BCE) &#10086;<br />
-  &bull; <span class="raised-cap">A</span>rs adeo latet arte sua [Art is so hidden by its own art]&thinsp;&mdash;&thinsp;Ovid (Publius Ovidius Naso), <em>Metamorphoses</em> X.252 (c. 8 CE) &#10086;
+  &bull; <span class="raised-cap">A</span>rs longa, vita brevis [Art is long, life is short]&thinsp;&mdash;&thinsp;Hippocrates (Hippocrates of Kos), <em>Aphorisms</em> I.1 (c. 400 BCE) <span class="hedera">&#10086;</span><br />
+  &bull; <span class="raised-cap">A</span>rs adeo latet arte sua [Art is so hidden by its own art]&thinsp;&mdash;&thinsp;Ovid (Publius Ovidius Naso), <em>Metamorphoses</em> X.252 (c. 8 CE) <span class="hedera">&#10086;</span>
 </p>
+</div>
 
 <p class="dinkus1" role="separator" aria-label="Dinkus section break" tabindex="-1">
 	* * *
