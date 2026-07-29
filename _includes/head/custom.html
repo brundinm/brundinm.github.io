@@ -60,11 +60,23 @@
 {% endif %}
 
 {% if page.url == '/art/' %}
-<!-- MRB: Track hover events for dinkus1, dinkus2, and digital-clock -->
+<!-- MRB: Track hover events for hedera, dinkus1, dinkus2, and digital-clock -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   /* Ensure GoatCounter is fully loaded before binding events */
   if (!window.goatcounter || !window.goatcounter.count) return;
+
+  /* Track hover on hedera */
+  const dinkus1 = document.querySelector('span.hedera');
+  if (hedera) {
+    hedera.addEventListener('mouseenter', function () {
+      window.goatcounter.count({
+        path:  'hover-hedera',
+        title: 'Hovered hedera',
+        event: true,
+      });
+    }, { once: true });
+  }
 
   /* Track hover on dinkus1 */
   const dinkus1 = document.querySelector('p.dinkus1');
