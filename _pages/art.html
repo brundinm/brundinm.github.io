@@ -40,7 +40,7 @@ ul li {
 .euclid-wrapper {
   position: relative;
 }
-.euclid-bg {
+.euclid-image {
   content: "";
   position: absolute;
   top: 50%;
@@ -74,10 +74,10 @@ ul li {
 .small-caps {
   font-variant: small-caps;
 }
-span.raised-cap {
+.raised-cap {
   display: inline-block;
 }
-span.raised-cap::first-letter {
+.raised-cap::first-letter {
   font-size: 1.5em;
   float: none;
   vertical-align: baseline;
@@ -86,13 +86,12 @@ span.raised-cap::first-letter {
 }
 .hedera {
   position: relative;
-  z-index: 3;
 }
 .euclid-wrapper:has(.hedera:hover) .euclid-text {
-  opacity: 0.15 !important;
+  opacity: 0.15;
 }
-.euclid-wrapper:has(.hedera:hover) .euclid-bg {
-  opacity: 1 !important;
+.euclid-wrapper:has(.hedera:hover) .euclid-image {
+  opacity: 1;
 }
 .dinkus1 {
   display: table;
@@ -248,7 +247,7 @@ span.raised-cap::first-letter {
   position: relative;
   top: -15px;
   overflow: visible;
-  overflow-y: visible !important; 
+  overflow-y: visible; 
   word-wrap: break-word;
   white-space: pre-wrap;
 }
@@ -261,7 +260,7 @@ span.raised-cap::first-letter {
 .time-flies {
   display: none;
   overflow: visible;
-  overflow-y: visible !important;
+  overflow-y: visible;
   word-wrap: break-word;
   white-space: pre-wrap;
 }
@@ -271,7 +270,7 @@ span.raised-cap::first-letter {
   font-size: 75%;
   line-height: 1;
   overflow: visible;
-  overflow-y: visible !important;
+  overflow-y: visible;
   word-wrap: break-word;
   white-space: pre-wrap;
 }
@@ -316,7 +315,7 @@ span.raised-cap::first-letter {
 <div class="column-container">
 
 <div class="euclid-wrapper">
-<div class="euclid-bg"></div>
+<div class="euclid-image"></div>
 <p class="drop-cap euclid-text">
   T<span class="small-caps">wo whimsical</span> digital art collages, with a Latin inflection.<br />
   &bull; <span class="raised-cap">A</span>rs longa, vita brevis [Art is long, life is short]&thinsp;&mdash;&thinsp;Hippocrates (Hippocrates of Kos), <em>Aphorisms</em> I.1 (c. 400 BCE) <span class="hedera">&#10086;</span><br />
