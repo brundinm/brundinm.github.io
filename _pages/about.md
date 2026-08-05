@@ -76,7 +76,7 @@ Canada T5J 4S2
     <img src="/images/orcid-favicon.ico" alt="ORCID icon" width="16" height="16"> <a href="https://orcid.org/0000-0002-0307-4123" target="_blank">ORCID profile</a>
   </li>
   <li>
-    <img src="/images/uofa-favicon.ico" alt="U of A icon" width="16" height="16"> <a href="https://ualberta.scholaris.ca/search?spc.page=1&amp;query=author:%22Brundin,%20Michael%22-dc.identifier.doi:%2210.7939%2FR3DR2PR40%22-search.resourceid:326b5da8-9186-4471-8862-281a84d95ced&amp;spc.sf=dc.date.issued&amp;spc.sd=DESC&amp;spc.rpp=20" target="_blank">Scholaris (U of A DSpace) items</a>
+    <img src="/images/uofa-favicon.ico" alt="U of A icon" width="16" height="16"> <a href="https://ualberta.scholaris.ca/search?spc.page=1&amp;query=author:%22Brundin,%20Michael%22&amp;spc.sf=dc.date.issued&amp;spc.sd=DESC&amp;spc.rpp=20" target="_blank">Scholaris (U of A DSpace) items</a>
   </li>
 </ul>
 <p>
