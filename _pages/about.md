@@ -70,7 +70,7 @@ Canada T5J 4S2
     <img src="/images/github-favicon.ico" alt="GitHub icon" width="16" height="16"> <a href="https://github.com/brundinm" target="_blank">GitHub profile</a>
   </li>
   <li>
-    <img src="/images/google-scholar-favicon.ico" alt="Google Scholar icon" width="16" height="16"> <a href="https://scholar.google.ca/citations?hl=en&amp;user=XZeV34gAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank">Google Scholar profile</a>
+    <img src="/images/google-scholar-favicon.ico" alt="Google Scholar icon" width="16" height="16"> <a href="https://scholar.google.com/citations?user=XZeV34gAAAAJ" target="_blank">Google Scholar profile</a>
   </li>
   <li>
     <img src="/images/orcid-favicon.ico" alt="ORCID icon" width="16" height="16"> <a href="https://orcid.org/0000-0002-0307-4123" target="_blank">ORCID profile</a>
