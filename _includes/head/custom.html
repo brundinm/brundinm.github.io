@@ -56,9 +56,9 @@ identity nodes to a single person entity identity graph  -->
 <script data-goatcounter="https://brundinm.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-<!-- MRB: Track link clicks, but not clicks to the 8 regular content pages -->
 {% assign target_pages = "/,/publications/,/presentations/,/teaching/,/service/,/code/,/gallery/,/art/" | split: "," %}
 {% if target_pages contains page.url %}
+<!-- MRB: Track link clicks, but not clicks to the 8 regular content pages -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var links = document.getElementsByTagName('a');
@@ -95,8 +95,8 @@ identity nodes to a single person entity identity graph  -->
 </script>
 {% endif %}
 
-<!-- MRB: Track hover events for hedera, dinkus1, dinkus2, and digital-clock -->
 {% if page.url == '/art/' %}
+<!-- MRB: Track hover events for hedera, dinkus1, dinkus2, and digital-clock -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   /* Ensure GoatCounter is fully loaded before binding events */
