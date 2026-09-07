@@ -52,17 +52,17 @@ identity nodes to a single person entity identity graph  -->
 }
 </script>
 
-<!-- MRB: Track visits to the 8 regular content pages -->
+<!-- MRB: Track visits to the 8 content pages -->
 <script data-goatcounter="https://brundinm.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
 {% assign target_pages = "/,/publications/,/presentations/,/teaching/,/service/,/code/,/gallery/,/art/" | split: "," %}
 {% if target_pages contains page.url %}
-<!-- MRB: Track link clicks, but not clicks to the 8 regular content pages -->
+<!-- MRB: Track link clicks, but not clicks to the 8 content pages -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var links = document.getElementsByTagName('a');
-    /* Add the URL paths of the 8 regular content pages to ignore */
+    /* Add the URL paths of the 8 content pages to ignore */
     var contentPages = ['/', '/publications/', '/presentations/', '/teaching/', '/service/', '/code/', '/gallery/', '/art/'];
 
     for (var i = 0; i < links.length; i++) {
@@ -80,7 +80,7 @@ identity nodes to a single person entity identity graph  -->
         /* Ensure trailing slashes match the contentPages list format */
         if (path !== '/' && !path.endsWith('/')) path += '/';
 
-        /* If the link points to one of the 8 regular pages, do not log an event */
+        /* If the link points to one of the 8 content pages, do not log an event */
         if (targetUrl.hostname === window.location.hostname && contentPages.includes(path)) return;
 
         /* Log everything else (external links and internal links) as a flat event */
