@@ -184,14 +184,14 @@ identity nodes to a single person entity identity graph  -->
 }
 </script>
 
-<!-- MRB: Umami: track page visits -->
+<!-- MRB: Track page visits (Umami) -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="a57b628b-e1fd-406d-bf2d-405c9df10ab6"></script>
 
-<!-- MRB: GoatCounter: track page visits -->
+<!-- MRB: Track page visits (GoatCounter) -->
 <script data-goatcounter="https://brundinm.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-<!-- MRB: Umami: track external link clicks -->
+<!-- MRB: Track external link clicks (Umami) -->
 <script type="text/javascript">
   document.addEventListener('click', function (event) {
     const link = event.target.closest('a');
@@ -206,7 +206,7 @@ identity nodes to a single person entity identity graph  -->
 
 {% assign target_pages = "/,/publications/,/presentations/,/teaching/,/service/,/code/,/gallery/,/art/" | split: "," %}
 {% if target_pages contains page.url %}
-<!-- MRB: GoatCounter: track link clicks, but not clicks to the 8 content pages -->
+<!-- MRB: Track link clicks, but not clicks to the 8 content pages (GoatCounter) -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var links = document.getElementsByTagName('a');
@@ -238,7 +238,7 @@ identity nodes to a single person entity identity graph  -->
 {% endif %}
 
 {% if page.url == '/art/' %}
-<!-- MRB: GoatCounter: track hover events for hedera, dinkus1, dinkus2, and digital-clock -->
+<!-- MRB: Track hover events for hedera, dinkus1, dinkus2, and digital-clock (GoatCounter) -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   /* Ensure GoatCounter is fully loaded before binding events */
