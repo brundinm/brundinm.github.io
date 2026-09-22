@@ -22,35 +22,164 @@ identity nodes to a single person entity identity graph  -->
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://brundinm.github.io",
+  "@id": "https://brundinm.github.io/#person",
   "name": "Michael Brundin",
   "alternateName": "Michael R. Brundin",
-  "jobTitle": "Digital Services and Systems Librarian",
   "url": "https://brundinm.github.io",
+  "mainEntityOfPage": "https://brundinm.github.io",
+  "sameAs": [
+    "https://github.com/brundinm",
+    "https://scholar.google.com/citations?user=XZeV34gAAAAJ",
+    "https://orcid.org/0000-0002-0307-4123",
+    "https://library.macewan.ca/about/our-people/michael-brundin"
+  ],
   "identifier": {
     "@type": "PropertyValue",
     "propertyID": "ORCID",
     "value": "0000-0002-0307-4123",
     "url": "https://orcid.org/0000-0002-0307-4123"
   },
-  "mainEntityOfPage": [
-    "https://orcid.org/0000-0002-0307-4123"
-  ],
-  "worksFor": {
-    "@type": "CollegeOrUniversity",
-    "name": "MacEwan University",
-    "sameAs": "https://macewan.ca"
-  },
+  "jobTitle": "Digital Services and Systems Librarian",
   "hasOccupation": {
     "@type": "Occupation",
     "name": "Academic Librarian",
     "description": "Digital Services and Systems Librarian, serving as library liaison to the Department of Computer Science, Access and Disability Resources, and Information Technology Services."
   },
-  "sameAs": [
-    "https://github.com/brundinm",
-    "https://scholar.google.com/citations?user=XZeV34gAAAAJ",
-    "https://orcid.org/0000-0002-0307-4123",
-    "https://library.macewan.ca/about/our-people/michael-brundin"
+  "worksFor": {
+    "@type": "CollegeOrUniversity",
+    "name": "MacEwan University",
+    "sameAs": "https://www.macewan.ca",
+    "subOrganization": {
+      "@type": "Library",
+      "name": "MacEwan University Library",
+      "sameAs": "https://library.macewan.ca"
+    }
+  },
+  "alumniOf": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "University of Alberta",
+      "sameAs": "https://ualberta.ca",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "Master of Library and Information Studies (MLIS)"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "Bachelor of Science (BSc)"
+        }
+      ]
+    }
+  ],
+  "knowsAbout": [
+    "Library statistics and assessment",
+    "Information systems design and evaluation",
+    "Digital libraries and institutional repositories",
+    "Geospatial technologies and geographic information systems",
+    "Computer Science"
+  ],
+  "publications": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Conflicting Values: An Exploration of the Tensions Between Learning Analytics and Academic Librarianship",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Tami Oliphant",
+          "sameAs": "https://apps.ualberta.ca/directory/person/toliphan"
+        },
+        { 
+          "@id": "https://brundinm.github.io/#person"
+        }
+      ],
+      "datePublished": "2019",
+      "isPartOf": {
+        "@type": "PublicationVolume",
+        "name": "Library Trends",
+        "volumeNumber": "68",
+        "issueNumber": "1"
+      },
+      "pageStart": "5",
+      "pageEnd": "23",
+      "sameAs": [
+        "https://doi.org/10.1353/lib.2019.0028",
+        "https://doi.org/10.7939/84281"
+      ]
+    },
+    {
+      "@type": "Report",
+      "name": "National Statistical and Values Profile of Canadian Libraries: Report to CLA Executive Council",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Alvin M. Schrader",
+          "sameAs": "https://sites.ualberta.ca/~aschrade"
+        },
+        {
+          "@id": "https://brundinm.github.io/#person"
+        }
+      ],
+      "datePublished": "2012",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Canadian Library Association"
+      },
+      "sameAs": [
+        "https://cla.ca/wp-content/uploads/NationalValuesProfileCanadianLibrariesReportfinal.pdf",
+        "https://doi.org/10.7939/84287"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Using a Geographic Information System to Analyze Public Library Performance Measures",
+      "author": [
+        {
+          "@id": "https://brundinm.github.io/#person"
+        }
+      ],
+      "datePublished": "2007",
+      "isPartOf": {
+        "@type": "Book",
+        "name": "ASPRS Annual Conference 2007: Identifying Geospatial Solutions",
+        "volumeNumber": "1"
+      },
+      "pageStart": "95",
+      "pageEnd": "105",
+      "publisher": {
+        "@type": "Organization",
+        "name": "American Society for Photogrammetry and Remote Sensing"
+      },
+      "sameAs": [
+        "https://old.asprs.org/wp-content/uploads/2011/01/0010.pdf",
+        "https://doi.org/10.7939/84293"
+      ]
+    },
+    {
+      "@type": "Report",
+      "name": "National Core Library Statistics Program: Statistical Report, 1999: Cultural and Economic Impact of Libraries on Canada",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Alvin M. Schrader",
+          "sameAs": "https://sites.ualberta.ca/~aschrade"
+        },
+        {
+          "@id": "https://brundinm.github.io/#person"
+        }
+      ],
+      "datePublished": "2002",
+      "publisher": {
+        "@type": "Organization",
+        "name": "National Library of Canada"
+      },
+      "sameAs": [
+        "https://lac-bac.gc.ca/obj/r3/f2/02-e.pdf",
+        "https://doi.org/10.7939/84285"
+      ]
+    }
   ]
 }
 </script>
