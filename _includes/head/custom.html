@@ -18,7 +18,7 @@
 
 {% if page.url == '/' %}
 <!-- MRB: JSON-LD schema markup code block to link my various profiles or
-identity nodes to a single person entity identity graph  -->
+identity nodes to a single person entity identity graph -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,7 +45,8 @@ identity nodes to a single person entity identity graph  -->
   "hasOccupation": {
     "@type": "Occupation",
     "name": "Academic Librarian",
-    "description": "Digital Services and Systems Librarian, serving as library liaison to the Department of Computer Science, Access and Disability Resources, and Information Technology Services."
+    "description": "A leadership role managing, maintaining, and improving the Library's technology infrastructure for both staff and patrons.",
+    "responsibilities": "Overseeing various digital services and information systems at MacEwan Library; investigating and implementing new digital technologies that support teaching, learning, and research at MacEwan University; and library liaison to the Department of Computer Science, Access and Disability Resources, and Information Technology Services."
   },
   "worksFor": {
     "@type": "CollegeOrUniversity",
@@ -55,6 +56,27 @@ identity nodes to a single person entity identity graph  -->
       "@type": "Library",
       "name": "MacEwan University Library",
       "sameAs": "https://library.macewan.ca"
+    }
+  },
+  "workLocation": {
+    "@type": "Room",
+    "name": "Office 7-275B",
+    "description": "Second floor office in MacEwan Library, Building 7.",
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "MacEwan University Library",
+      "containedInPlace": {
+        "@type": "Place",
+        "name": "MacEwan University",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10700 104 Avenue NW",
+          "addressLocality": "Edmonton",
+          "addressRegion": "Alberta",
+          "postalCode": "T5J 4S2",
+          "addressCountry": "Canada"
+        }
+      }
     }
   },
   
