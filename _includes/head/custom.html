@@ -16,6 +16,7 @@
 
 <!-- end custom head snippets -->
 
+{% if page.url == '/' %}
 <!-- MRB: JSON-LD schema markup code block to link my various profiles or
 identity nodes to a single person entity identity graph  -->
 <script type="application/ld+json">
@@ -185,6 +186,7 @@ identity nodes to a single person entity identity graph  -->
   ]
 }
 </script>
+{% endif %}
 
 <!-- MRB: Track page visits (Umami) -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="a57b628b-e1fd-406d-bf2d-405c9df10ab6"></script>
