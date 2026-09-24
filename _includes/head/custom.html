@@ -17,8 +17,7 @@
 <!-- end custom head snippets -->
 
 {% if page.url == '/' %}
-<!-- MRB: JSON-LD schema markup code block to link my various profiles or
-identity nodes to a single person entity identity graph -->
+<!-- MRB: JSON-LD schema markup code block to link my various profiles or identity nodes to a single person entity identity graph -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -48,16 +47,23 @@ identity nodes to a single person entity identity graph -->
     "description": "A leadership role managing, maintaining, and improving the Library's technology infrastructure for both staff and patrons.",
     "responsibilities": "Overseeing various digital services and information systems at MacEwan Library; investigating and implementing new digital technologies that support teaching, learning, and research at MacEwan University; and library liaison to the Department of Computer Science, Access and Disability Resources, and Information Technology Services."
   },
-  "worksFor": {
-    "@type": "CollegeOrUniversity",
-    "name": "MacEwan University",
-    "sameAs": "https://www.macewan.ca",
-    "subOrganization": {
+  "worksFor": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "MacEwan University",
+      "sameAs": "https://www.macewan.ca"
+    },
+    {
       "@type": "Library",
       "name": "MacEwan University Library",
-      "sameAs": "https://library.macewan.ca"
+      "sameAs": "https://library.macewan.ca",
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "MacEwan University",
+        "sameAs": "https://www.macewan.ca"
+      }
     }
-  },
+  ],
   "workLocation": {
     "@type": "Room",
     "name": "Office 7-275B",
@@ -103,10 +109,21 @@ identity nodes to a single person entity identity graph -->
     "Library statistics and assessment",
     "Information systems design and evaluation",
     "Digital libraries and institutional repositories",
-    "Geospatial technologies and geographic information systems"
+    "Geospatial technologies and geographic information systems",
+    {
+      "@type": "DefinedTerm",
+      "name": "Computer Science",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Library of Congress Subject Headings",
+        "url": "https://www.loc.gov/aba/publications/FreeLCSH/C.pdf#page=629"
+      },
+      "termCode": "sh89003285",
+      "url": "https://id.loc.gov/authorities/subjects/sh89003285.html"
+    }
   ],
   
-  "publications": [
+  "creativeWork": [
     {
       "@type": "ScholarlyArticle",
       "name": "Conflicting Values: An Exploration of the Tensions Between Learning Analytics and Academic Librarianship",
@@ -204,6 +221,20 @@ identity nodes to a single person entity identity graph -->
         "https://lac-bac.gc.ca/obj/r3/f2/02-e.pdf",
         "https://doi.org/10.7939/84285"
       ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "marc-records-editing",
+      "description": "Code, documentation, and reports that are associated with MARC records editing operations.",
+      "codeRepository": "https://github.com/brundinm/marc-records-editing",
+      "programmingLanguage": ["AWK", "Bash", "Perl", "Python", "sed", "XSLT"]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "system-links-checking",
+      "description": "Five Bash shell scripts to check for broken links on five MacEwan Library information systems: Drupal, DSpace, LibGuides, Omeka, and Talis Aspire.",
+      "codeRepository": "https://github.com/brundinm/system-links-checking",
+      "programmingLanguage": "Bash"
     }
   ]
 }
