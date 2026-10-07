@@ -17,7 +17,7 @@
 <!-- end custom head snippets -->
 
 {% if page.url == '/' %}
-<!-- MRB: JSON-LD schema markup code block to link my various profiles or identity nodes to a single person entity identity graph -->
+<!-- MRB: JSON-LD Schema.org person entity code block -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -39,7 +39,6 @@
     "value": "0000-0002-0307-4123",
     "url": "https://orcid.org/0000-0002-0307-4123"
   },
-  
   "jobTitle": "Digital Services and Systems Librarian",
   "hasOccupation": {
     "@type": "Occupation",
@@ -85,7 +84,6 @@
       }
     }
   },
-  
   "alumniOf": [
     {
       "@type": "EducationalOrganization",
@@ -121,9 +119,15 @@
       "termCode": "sh89003285",
       "url": "https://id.loc.gov/authorities/subjects/sh89003285.html"
     }
-  ],
-  
-  "creativeWork": [
+  ]
+}
+</script>
+
+<!-- MRB: JSON-LD Schema.org creative works code block -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@type": "ScholarlyArticle",
       "name": "Conflicting Values: An Exploration of the Tensions Between Learning Analytics and Academic Librarianship",
@@ -133,16 +137,19 @@
           "name": "Tami Oliphant",
           "sameAs": "https://apps.ualberta.ca/directory/person/toliphan"
         },
-        { 
+        {
           "@id": "https://brundinm.github.io/#person"
         }
       ],
       "datePublished": "2019",
       "isPartOf": {
-        "@type": "PublicationVolume",
-        "name": "Library Trends",
-        "volumeNumber": "68",
-        "issueNumber": "1"
+        "@type": "PublicationIssue",
+        "issueNumber": "1",
+        "isPartOf": {
+          "@type": "PublicationVolume",
+          "name": "Library Trends",
+          "volumeNumber": "68"
+        }
       },
       "pageStart": "5",
       "pageEnd": "23",
@@ -184,7 +191,7 @@
       ],
       "datePublished": "2007",
       "isPartOf": {
-        "@type": "Book",
+        "@type": "PublicationVolume",
         "name": "ASPRS Annual Conference 2007: Identifying Geospatial Solutions",
         "volumeNumber": "1"
       },
@@ -226,6 +233,9 @@
       "@type": "SoftwareSourceCode",
       "name": "marc-records-editing",
       "description": "Code, documentation, and reports that are associated with MARC records editing operations.",
+      "author": {
+        "@id": "https://brundinm.github.io/#person"
+      },
       "codeRepository": "https://github.com/brundinm/marc-records-editing",
       "programmingLanguage": ["AWK", "Bash", "Perl", "Python", "sed", "XSLT"]
     },
@@ -233,6 +243,9 @@
       "@type": "SoftwareSourceCode",
       "name": "system-links-checking",
       "description": "Five Bash shell scripts to check for broken links on five MacEwan Library information systems: Drupal, DSpace, LibGuides, Omeka, and Talis Aspire.",
+      "author": {
+        "@id": "https://brundinm.github.io/#person"
+      },
       "codeRepository": "https://github.com/brundinm/system-links-checking",
       "programmingLanguage": "Bash"
     }
