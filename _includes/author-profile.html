@@ -275,9 +275,7 @@ html[data-theme="dark"] .weather__urls,
 </style>
 
 <!-- External U of A weather data JavaScript variables -->
-<script language="JavaScript"
-src="https://easweb.eas.ualberta.ca/weather_service.php?js"
-type="text/javascript" referrerpolicy="no-referrer"></script>
+<script src="https://easweb.eas.ualberta.ca/weather_service.php?js" referrerpolicy="no-referrer"></script>
 
 <script>
 /* U of A weather data script */
@@ -354,12 +352,12 @@ if (typeof(temperature) == "undefined" || typeof(wind_dir) == "undefined" ||
   <div class="weather__urls">
     <p class="author-weather">
       <span class="weather-header">
-        <script language="JavaScript" type="text/javascript">
+        <script>
           document.write(weatherHeader);
         </script>
       </span>
       <span class="weather-data">
-        <script language="JavaScript" type="text/javascript">
+        <script>
           document.write(weatherData);
         </script>
       </span>
