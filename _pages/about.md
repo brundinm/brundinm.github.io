@@ -105,7 +105,7 @@ Canada T5J 4S2
 </ul>
 
 <p>
-  In my career (1997&ndash;present), I have worked at The Alberta Library, Edmonton Public Library, MacEwan University (John L. Haar Library, or MacEwan University Library), Northern Alberta Institute of Technology (McNally Library, or NAIT Library), University of Alberta (Department of English and Film Studies, School of Library and Information Studies, and University of Alberta Libraries [Cameron Library, Rutherford North Library, and Rutherford South Library]), University of Calgary (Department of Community Health Sciences), and University of Western Ontario (Faculty of Information and Media Studies).
+  In my career (1997&ndash;present), I have worked at The Alberta Library, Edmonton Public Library, MacEwan University (MacEwan University Library), Northern Alberta Institute of Technology (NAIT Library), University of Alberta (Department of English and Film Studies, School of Library and Information Studies, and University of Alberta Libraries [Cameron Library, Rutherford North Library, and Rutherford South Library]), University of Calgary (Department of Community Health Sciences), and University of Western Ontario (Faculty of Information and Media Studies).
 </p>
 
 </div>
