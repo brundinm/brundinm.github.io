@@ -24,6 +24,8 @@ ul li {
 .signature-block {
   font-size: 75%;
   line-height: 1;
+  overflow: visible;
+  overflow-y: visible !important;
   white-space: pre-wrap;
   overflow-wrap: break-word;
 }
